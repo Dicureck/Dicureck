@@ -124,3 +124,7 @@ The public [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migrati
 [← Knowledge Base index](README.md) · [Engineering portfolio](https://dicureck.github.io/) · [GitHub profile](https://github.com/Dicureck)
 
 *Melissa Castro · Independent, synthetic examples only. Not client or production material.*
+
+## Verified Oracle target-only smoke · 2026-10-15
+
+The [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) now has an [actual Oracle Free 26ai runtime test](https://github.com/Dicureck/oracle-migration-toolkit/actions/runs/38815481933) using fictional tables, queries and an INSERT/ROLLBACK example. [Original runtime output](https://github.com/Dicureck/oracle-migration-toolkit/blob/main/evidence/oracle-free-runtime-2026-10-15.json) is retained in source control. **This does not establish Oracle 12.1.0.2 compatibility or SQL Server-to-Oracle equivalence.**

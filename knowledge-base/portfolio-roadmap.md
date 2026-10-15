@@ -7,7 +7,7 @@ Public source code and synthetic tests demonstrate concrete techniques. They are
 | Project | Current public evidence | Still worth validating |
 |---|---|---|
 | [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab) | **SQL Server Developer container integration passed**, synthetic full-row equality checks and a [measured CI smoke benchmark](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md) | Actual execution plans/logical reads, more independent runs and production-like workloads |
-| [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) | Offline review, dependency plan, original samples | Cross-engine integration and behavioral parity |
+| [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) | Offline toolkit CI plus [real Oracle Free 26ai syntax and query smoke](https://github.com/Dicureck/oracle-migration-toolkit/blob/main/evidence/oracle-free-runtime-2026-10-15.json) | **Oracle 12.1** compatibility and SQL Server ↔ Oracle functional parity |
 | [Logistics & Route Intelligence](https://github.com/Dicureck/logistics-route-intelligence) | Synthetic dataset generator, KPI dashboard, tests | Native BI artifact if added |
 | [Financial Intelligence Lab](https://github.com/Dicureck/financial-intelligence-lab) | Fictional ledger/reporting, checks, dashboard | Native BI report if added |
 | [Data Quality Toolkit](https://github.com/Dicureck/data-quality-toolkit) | Validation CLI, fixtures, tests | Broader schemas and adapters |
