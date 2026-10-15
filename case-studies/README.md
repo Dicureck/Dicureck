@@ -22,3 +22,8 @@ The interactive website generates a deterministic local sample. The correspondin
 Each follows a consistent engineering narrative: **question → data contract → design → validation → limitations → demo**. Screenshots should always be labeled with synthetic sample and software version. No internal screenshots, system endpoints or actual business data are included.
 
 [Engineering Knowledge Base](../knowledge-base/README.md) · [Portfolio](https://dicureck.github.io/)
+
+
+## Verified SQL Server case-study evidence
+
+The [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md) has a real SQL Server Developer container run with synthetic fixtures, duplicate-aware result equivalence and measured smoke timings. The observations are bounded to one CI environment.

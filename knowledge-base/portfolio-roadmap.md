@@ -6,7 +6,7 @@ Public source code and synthetic tests demonstrate concrete techniques. They are
 
 | Project | Current public evidence | Still worth validating |
 |---|---|---|
-| [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab) | T-SQL cases, offline tests, benchmark harness | Actual SQL Server runtime measurements |
+| [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab) | **SQL Server Developer container integration passed**, synthetic full-row equality checks and a [measured CI smoke benchmark](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md) | Actual execution plans/logical reads, more independent runs and production-like workloads |
 | [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) | Offline review, dependency plan, original samples | Cross-engine integration and behavioral parity |
 | [Logistics & Route Intelligence](https://github.com/Dicureck/logistics-route-intelligence) | Synthetic dataset generator, KPI dashboard, tests | Native BI artifact if added |
 | [Financial Intelligence Lab](https://github.com/Dicureck/financial-intelligence-lab) | Fictional ledger/reporting, checks, dashboard | Native BI report if added |
@@ -17,12 +17,12 @@ Public source code and synthetic tests demonstrate concrete techniques. They are
 
 ## Next priorities
 
-1. Publish navigable documentation and check internal links.
-2. Add SQL Server reproducible benchmark evidence, keeping test limitations explicit.
-3. Produce original Tableau / Power BI / paginated reporting examples where tool licenses allow.
-4. Build a .NET CLI with synthetic reports and actual automated tests.
-5. Build approval-gated, dry-run-first AI and email automation examples.
-6. Keep the professional portfolio and Wiki references synchronized.
+1. Extend the [first real SQL Server CI benchmark](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md) with actual plans/reads and independent repetitions.
+2. Verify the offline Oracle toolkit against controlled Oracle and SQL Server engines.
+3. Produce an original, licensed Tableau / Power BI / paginated report artifact with reconciled outputs.
+4. Extend the existing runnable [Python automation](../engineering-labs/ai-business-automation/README.md) and [.NET 8 reporting](../engineering-labs/enterprise-reporting-dotnet/README.md) laboratories with more fixtures and presentation assets.
+5. Prepare official GitHub Releases from evidence-backed draft notes (a draft is **not** a native release).
+6. Maintain the external-link-based native Wiki and pursue an authorized native GitHub Projects board.
 
 The native GitHub Wiki is separate from the repository. These version-controlled pages are the canonical documents; copying a page into the Wiki does **not** create automatic synchronization.
 
@@ -49,5 +49,13 @@ These issues are the trackable implementation and verification gates for the nex
 - [Oracle cross-engine integration](https://github.com/Dicureck/Dicureck/issues/9)
 - [Native reporting assets and case studies](https://github.com/Dicureck/Dicureck/issues/8)
 - [Native Wiki synchronization and public Projects board](https://github.com/Dicureck/Dicureck/issues/10)
+- [Native GitHub Releases from verified source and change logs](https://github.com/Dicureck/Dicureck/issues/11)
 
 **Note:** The AI Business Automation Lab and Enterprise Reporting .NET code are currently housed in the profile repository's [engineering-labs](https://github.com/Dicureck/Dicureck/tree/main/engineering-labs) directory. Their offline CI checks are distinct from live provider, email, database and proprietary reporting product integrations.
+
+
+## Public overview and screenshot evidence
+
+The [responsive public development roadmap](https://dicureck.github.io/roadmap.html) summarizes verified and planned work. Actual Chromium screenshots from the successful [live-site run](https://github.com/Dicureck/dicureck.github.io/actions/runs/38812402350) are available as a GitHub Actions artifact; source data are entirely fictional.
+
+[Release readiness by repository](releases.md) lists source version, CI evidence and outstanding native GitHub release steps.

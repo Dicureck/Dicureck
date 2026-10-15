@@ -23,6 +23,7 @@ This **version-controlled knowledge base** is the canonical home for my public e
 | Reporting Roadmap | [Published artifacts vs planned work](reporting-and-automation.md) | [Portfolio roadmap](portfolio-roadmap.md) |
 | Governance | [Privacy and publication standards](portfolio-standards.md) | Applies across all public repos |
 | Wiki maintenance | [How these pages relate to native Wiki](wiki-maintenance.md) | [Open Wiki](https://github.com/Dicureck/Dicureck/wiki) |
+| Release preparation | [Version and official Release status](releases.md) | [Roadmap](portfolio-roadmap.md) |
 
 ## Engineering principles
 

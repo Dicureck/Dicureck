@@ -78,7 +78,7 @@ Independent, open-source demonstrations built with **synthetic data** and origin
 
 | Project | Engineering focus | Verification |
 |:--|:--|:--|
-| **[SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab)** | SQL optimization exercises, result-set checks, and a repeatable benchmarking workflow | [![SQL Lab CI](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml) |
+| **[SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab)** | SQL optimization, real SQL Server Developer CI integration and [measured synthetic benchmark evidence](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md) | [![SQL Lab CI](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml) |
 | **[Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit)** | T-SQL-to-PL/SQL migration review, dependency planning, and data reconciliation | [![Oracle Toolkit CI](https://github.com/Dicureck/oracle-migration-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/oracle-migration-toolkit/actions/workflows/ci.yml) |
 | **[Logistics & Route Intelligence](https://github.com/Dicureck/logistics-route-intelligence)** | Route analytics, geofence logic, delivery KPIs, and an offline dashboard | [![Logistics CI](https://github.com/Dicureck/logistics-route-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/logistics-route-intelligence/actions/workflows/ci.yml) |
 | **[Financial Intelligence Lab](https://github.com/Dicureck/financial-intelligence-lab)** | Synthetic profit-and-loss reporting, margins, budget comparisons, and BI modeling | [![Financial CI](https://github.com/Dicureck/financial-intelligence-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/financial-intelligence-lab/actions/workflows/ci.yml) |
@@ -168,3 +168,6 @@ I enjoy building data tools that solve practical problems—and making them clea
 **Explore:** [Interactive portfolio](https://dicureck.github.io/) · [Projects](https://github.com/Dicureck?tab=repositories) · [Engineering notes](./knowledge-base/README.md) · **Business inquiries:** [info@intebi.online](mailto:info@intebi.online)
 
 <p align="center"><sub>Built with curiosity, care, and attention to detail. · Melissa Castro · Guatemala</sub></p>
+
+
+**Reproducible versioning:** [Lab release drafts and confirmed CI evidence](./knowledge-base/releases.md) · [Public roadmap and genuine browser screenshots](https://dicureck.github.io/roadmap.html). Native Releases and a GitHub Projects board are still pending and are not described as published.

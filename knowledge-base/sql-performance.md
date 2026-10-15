@@ -68,7 +68,7 @@ For SQL exports, normalize schema, data types and formatting with a documented p
 
 A defensible benchmark includes environment/version, data volume, parameters, indexes, scripts, independent verification, all individual timings and summarized statistics such as median and p95. Differences between runs can come from cache or concurrency, not only the query change.
 
-**Companion lab:** [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab). Its public benchmark scripts require SQL Server execution. Offline test status must not be confused with measured runtime performance.
+**Companion lab:** [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab). A real SQL Server Developer container [completed an integration and measured CI smoke run](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md) on **2,000 synthetic customers, 12,000 orders and 36,000 order lines**. The date predicate example measured **3.136 ms** baseline vs **1.928 ms** candidate median in three measurements, with full-row validation; the aggregate example measured 17.929 vs 16.117 ms. These are observations from **one CI execution**, not production benchmarks or guaranteed improvements. SQL Server execution plans and logical reads remain a separate step.
 
 ## Review checklist
 

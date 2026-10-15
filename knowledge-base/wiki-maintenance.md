@@ -21,6 +21,12 @@
 6. Distinguish offline unit tests from integration or production evidence.
 7. Check relative links whenever pages move or are renamed.
 
+## Wiki pages that already exist
+
+The user-authored native [Home](https://github.com/Dicureck/Dicureck/wiki/Home), [SQL Performance](https://github.com/Dicureck/Dicureck/wiki/SQL-Performance) and sidebar are separate from this repository. Treat the native Wiki as a navigation portal while canonical technical notes remain in `knowledge-base/`. Do not assume template files automatically update the Wiki.
+
+**Curated templates:** [Home](../wiki-starter/Home.md) · [Sidebar](../wiki-starter/_Sidebar.md) · [Database Migration](../wiki-starter/Database-Migration.md) · [Data Quality](../wiki-starter/Data-Quality.md). These are source-controlled proposals, **not proof of native Wiki publication**.
+
 ## Publishing cadence
 
 Documentation updates can be reviewed in a GitHub commit. Native Wiki changes require a separate GitHub Wiki editor or an authorized browser/Git workflow; this project does not claim the two repositories are automatically synced.
