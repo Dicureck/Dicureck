@@ -34,6 +34,55 @@ class ReportTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             lab.summarize(wrong)
 
+    def test_invalid_record_contract(self):
+        valid = lab.synthetic_records()[0]
+        modifications = [
+            {"month": "2026-13"},
+            {"month": "2026-00"},
+            {"month": "not-a-month"},
+            {"id": ""},
+            {"amount": True},
+            {"amount": "5"},
+            {"amount": -5},
+            {"channel": "Other"},
+        ]
+        for values in modifications:
+            with self.subTest(values=values):
+                with self.assertRaises(ValueError):
+                    lab.summarize([{**valid, **values}])
+        with self.assertRaises(ValueError):
+            lab.summarize([{"id": "Missing-Fields"}])
+
+    def test_html_escapes_synthetic_table_fields(self):
+        report = {
+            "rows": 1, "revenue_su": 8,
+            "by_month_channel": [{
+                "month": "<script>alert(1)</script>",
+                "channel": "Digital", "orders": 1, "revenue_su": 8
+            }]
+        }
+        markup = lab.render_report(report)
+        self.assertNotIn("<script>", markup)
+        self.assertIn("&lt;script&gt;", markup)
+
+    def test_mocked_openai_response_uses_only_aggregates(self):
+        summary = lab.summarize(lab.synthetic_records())
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-placeholder",
+                                     "OPENAI_MODEL": "mocked-model"}):
+            with patch("urllib.request.urlopen") as opener:
+                opener.return_value.__enter__.return_value.read.return_value = (
+                    json.dumps({"output": [{"content": [
+                        {"type": "output_text", "text": "Fictional results only"}
+                    ]}]}).encode("utf-8")
+                )
+                result = lab.ai_review(summary, "openai", True, True)
+                self.assertEqual(result, "Fictional results only")
+                opener.assert_called_once()
+                request = opener.call_args.args[0]
+                payload = json.loads(request.data)
+                self.assertIn("synthetic units", payload["input"])
+                self.assertNotIn("test-placeholder", payload["input"])
+
     def test_html_and_preview(self):
         summary = lab.summarize(lab.synthetic_records())
         self.assertIn("<table>", lab.render_report(summary))

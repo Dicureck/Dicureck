@@ -7,6 +7,7 @@ import html
 import json
 import os
 import random
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -39,14 +40,25 @@ def summarize(records: list[dict]) -> dict:
     seen = set()
     grouped = defaultdict(lambda: {"orders": 0, "revenue_su": 0})
     for record in records:
-        if record["id"] in seen:
+        if not isinstance(record, dict) or any(
+            field not in record for field in ("id", "month", "channel", "amount")
+        ):
+            raise ValueError("missing synthetic record field")
+        record_id, month, channel, amount = (
+            record["id"], record["month"], record["channel"], record["amount"]
+        )
+        if not isinstance(record_id, str) or not record_id.strip():
+            raise ValueError("invalid synthetic record ID")
+        if record_id in seen:
             raise ValueError("duplicate synthetic ID")
-        seen.add(record["id"])
-        if record["channel"] not in CHANNELS or int(record["amount"]) < 0:
+        seen.add(record_id)
+        if not isinstance(month, str) or not re.fullmatch(r"[0-9]{4}-(0[1-9]|1[0-2])", month):
+            raise ValueError("invalid synthetic report month")
+        if channel not in CHANNELS or type(amount) is not int or amount < 0:
             raise ValueError("invalid synthetic record")
-        key = (record["month"], record["channel"])
+        key = (month, channel)
         grouped[key]["orders"] += 1
-        grouped[key]["revenue_su"] += int(record["amount"])
+        grouped[key]["revenue_su"] += amount
     if not records:
         raise ValueError("report requires at least one synthetic record")
     by_month_channel = [
