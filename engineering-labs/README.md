@@ -9,6 +9,8 @@ The profile repository now contains two original, independent sample projects al
 
 **Case studies:** [Automation and AI](../case-studies/ai-automation.md) · [C# reporting](../case-studies/enterprise-reporting.md).
 
+**Release preparation:** [AI Automation v0.1.0 draft](ai-business-automation/RELEASE_NOTES_DRAFT.md) · [.NET Reporting v0.1.0 draft](enterprise-reporting-dotnet/RELEASE_NOTES_DRAFT.md). These are **not** separate native GitHub Releases.
+
 **No real customer data or production integrations.** Separate top-level GitHub repos are not created by this folder structure. Native BI platform files and real database-runtime checks are future work.
 
 [Portfolio](https://dicureck.github.io/) · [BI examples](../knowledge-base/bi-examples.md) · [All documentation](../knowledge-base/README.md)

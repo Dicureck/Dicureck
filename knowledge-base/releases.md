@@ -26,3 +26,11 @@ The portfolio website itself has a [CHANGELOG](https://github.com/Dicureck/dicur
 The connected GitHub actions available for this portfolio can update repository content and CI workflows but **cannot currently create the native Release object or a public GitHub Projects board**. Preparation therefore stays clearly labeled until such authorization is available.
 
 [← Engineering roadmap](portfolio-roadmap.md) · [All documentation](README.md)
+
+
+## Labs within the profile repository
+
+- [AI & Business Automation — technical-preview release draft](../engineering-labs/ai-business-automation/RELEASE_NOTES_DRAFT.md); actual code in the profile repository with passing offline tests; no native release.
+- [Enterprise Reporting / C# — technical-preview release draft](../engineering-labs/enterprise-reporting-dotnet/RELEASE_NOTES_DRAFT.md); .NET 8 CLI CI verification, no native report-product runtime.
+
+The two folders are not standalone repositories. An official tag and release would apply to the containing `Dicureck/Dicureck` repository unless extracted.
