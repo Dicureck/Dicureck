@@ -21,10 +21,10 @@ Six independent repositories now have [official tagged releases](knowledge-base/
 - [ ] Add native GitHub Wiki pages for expanded technical sections (separate Git repo / edit workflow)
 - [x] Publish [six native GitHub Releases v0.1.0](knowledge-base/releases.md) from CI-verified source
 - [x] Create the [public GitHub Engineering Board](https://github.com/users/Dicureck/projects/1)
-- [ ] Import existing Issues #7–#11, configure their statuses and confirm a readable board; [setup guide](knowledge-base/projects-board-setup.md)
+- [x] Import existing Issues #7–#11, configure Todo / In Progress / Done statuses, and arrange them on the [public Engineering Board](https://github.com/users/Dicureck/projects/1/views/2); [board documentation](knowledge-base/projects-board-setup.md)
 - [ ] Extract each monorepo engineering lab into a dedicated repository once creation is authorized/supported by tooling
 
-For progress, use [GitHub Issues](https://github.com/Dicureck/Dicureck/issues) if enabled; this checklist remains the source-controlled fallback when a native GitHub Projects board is not accessible.
+Follow progress on the [native Engineering Board](https://github.com/users/Dicureck/projects/1/views/2) or through the linked [GitHub Issues](https://github.com/Dicureck/Dicureck/issues). This Markdown roadmap complements—not replaces—the board.
 
 ## Quality bar
 
