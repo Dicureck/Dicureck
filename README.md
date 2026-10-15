@@ -172,4 +172,6 @@ I enjoy building data tools that solve practical problems—and making them clea
 <p align="center"><sub>Built with curiosity, care, and attention to detail. · Melissa Castro · Guatemala</sub></p>
 
 
+**Copyright:** © 2026 Melissa Castro. All rights reserved for original material in this profile repository; see the [copyright and reuse policy](./COPYRIGHT.md). The six standalone MIT-licensed laboratories retain their own licenses.
+
 **Official source releases:** [Six published v0.1.0 versions](./knowledge-base/releases.md) · [Public roadmap and verified browser screenshots](https://dicureck.github.io/roadmap.html). The [public Engineering Board](https://github.com/users/Dicureck/projects/1/views/2) is configured with five linked GitHub Issues: two Todo, two In Progress and one Done. The [native Engineering Wiki](https://github.com/Dicureck/Dicureck/wiki) now includes eight synchronized engineering tutorials alongside the original Home and SQL Performance pages.
