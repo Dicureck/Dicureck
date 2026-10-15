@@ -4,7 +4,7 @@
 
 > Engineering clarity from complexity. Original technical notes, reproducible examples and honest verification boundaries.
 
-This **version-controlled knowledge base** is the canonical home for my public engineering guides. It complements the [interactive portfolio](https://dicureck.github.io/) and the [native GitHub Wiki](https://github.com/Dicureck/Dicureck/wiki), which is maintained separately.
+This **version-controlled knowledge base** contains the detailed technical guides. The [interactive portfolio](https://dicureck.github.io/) links to a [native GitHub Wiki](https://github.com/Dicureck/Dicureck/wiki) whose eight curated tutorial pages are now synchronized from [wiki-pages/](../wiki-pages) by [GitHub Actions](https://github.com/Dicureck/Dicureck/actions/workflows/wiki-sync.yml). Manually authored Home and SQL Performance pages remain protected.
 
 **New:** [Three case studies](../case-studies/README.md) · [Python & AI demo](../engineering-labs/ai-business-automation/README.md) · [C# reporting demo](../engineering-labs/enterprise-reporting-dotnet/README.md) · [Power BI / Tableau calculation examples](bi-examples.md) · [Public roadmap](../ROADMAP.md)
 
@@ -18,11 +18,11 @@ This **version-controlled knowledge base** is the canonical home for my public e
 | Python & pandas | [Reproducible data pipelines and tests](python-pandas.md) | [Logistics](https://github.com/Dicureck/logistics-route-intelligence) · [Finance](https://github.com/Dicureck/financial-intelligence-lab) |
 | Analytics Engineering | [Metrics, semantic models and dashboards](analytics-engineering.md) | [Incident Intelligence](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales) |
 | Reporting Platforms | [Power BI, Tableau, SSRS, Crystal](reporting-platforms.md) | Platform-specific artifacts are a documented roadmap |
-| C# / .NET | [Typed reporting application blueprint](csharp-dotnet.md) | Planned standalone .NET demonstration |
-| AI & Automation | [Secure workflows, approval and dry runs](ai-automation.md) | Planned mock-first automation demonstration |
+| C# / .NET | [Typed reporting application blueprint](csharp-dotnet.md) | [Runnable .NET 8 lab with CI](../engineering-labs/enterprise-reporting-dotnet/README.md) |
+| AI & Automation | [Secure workflows, approval and dry runs](ai-automation.md) | [Offline Python automation lab](../engineering-labs/ai-business-automation/README.md) |
 | Reporting Roadmap | [Published artifacts vs planned work](reporting-and-automation.md) | [Portfolio roadmap](portfolio-roadmap.md) |
 | Governance | [Privacy and publication standards](portfolio-standards.md) | Applies across all public repos |
-| Wiki maintenance | [How these pages relate to native Wiki](wiki-maintenance.md) | [Open Wiki](https://github.com/Dicureck/Dicureck/wiki) |
+| Native Wiki | [Protected source-sync policy](wiki-maintenance.md) | [Open synchronized tutorials](https://github.com/Dicureck/Dicureck/wiki) |
 | Release preparation | [Version and official Release status](releases.md) | [Roadmap](portfolio-roadmap.md) |
 
 ## Engineering principles

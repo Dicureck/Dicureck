@@ -22,9 +22,9 @@ Public source code and synthetic tests demonstrate concrete techniques. They are
 3. Produce an original, licensed Tableau / Power BI / paginated report artifact with reconciled outputs.
 4. Extend the existing runnable [Python automation](../engineering-labs/ai-business-automation/README.md) and [.NET 8 reporting](../engineering-labs/enterprise-reporting-dotnet/README.md) laboratories with more fixtures and presentation assets.
 5. Prepare official GitHub Releases from evidence-backed draft notes (a draft is **not** a native release).
-6. Maintain the external-link-based native Wiki and pursue an authorized native GitHub Projects board.
+6. Maintain the [synchronized native Wiki](https://github.com/Dicureck/Dicureck/wiki) and [public Engineering Board](https://github.com/users/Dicureck/projects/1/views/2).
 
-The native GitHub Wiki is separate from the repository. These version-controlled pages are the canonical documents; copying a page into the Wiki does **not** create automatic synchronization.
+The native Wiki is a separate Git repository. Eight curated pages are now synchronized from the controlled wiki-pages directory via GitHub Actions; the hand-authored Home and SQL Performance pages remain protected. The detailed knowledge-base documents are not mirrored verbatim.
 
 ## Release quality gate
 
@@ -65,4 +65,4 @@ The [responsive public development roadmap](https://dicureck.github.io/roadmap.h
 
 All six standalone source laboratories now provide [official v0.1.0 GitHub Releases](releases.md). Each release has passed its repository's CI for the exact tagged commit; see its page for evidence and limitations. AI/automation and .NET reporting remain subfolders in the profile repository.
 
-The native GitHub Projects board is the next planned presentation step. [Board configuration guide](projects-board-setup.md).
+The native [Engineering Board](https://github.com/users/Dicureck/projects/1/views/2) is public and configured with five linked Issues. The [Wiki Sync workflow](https://github.com/Dicureck/Dicureck/actions/workflows/wiki-sync.yml) now maintains eight curated internal tutorials.

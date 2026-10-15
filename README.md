@@ -143,6 +143,8 @@ New independent sample applications and source-backed reporting explanations:
 
 <sub>This panel is updated daily using [a Python script](./scripts/refresh_telemetry.py) and GitHub's public API. Language percentages are based on public repository file sizes; they do not measure skill or professional experience. CI badges indicate automated checks, not production certification.</sub>
 
+**Technical documentation:** [Browse the native Engineering Wiki](https://github.com/Dicureck/Dicureck/wiki) · [Verified Wiki sync](https://github.com/Dicureck/Dicureck/actions/workflows/wiki-sync.yml) · [Canonical Knowledge Base](./knowledge-base/README.md).
+
 ### `07 / MY WORKFLOW`
 
 ```text
@@ -170,4 +172,4 @@ I enjoy building data tools that solve practical problems—and making them clea
 <p align="center"><sub>Built with curiosity, care, and attention to detail. · Melissa Castro · Guatemala</sub></p>
 
 
-**Official source releases:** [Six published v0.1.0 versions](./knowledge-base/releases.md) · [Public roadmap and verified browser screenshots](https://dicureck.github.io/roadmap.html). The [public Engineering Board](https://github.com/users/Dicureck/projects/1/views/2) is configured with five linked GitHub Issues: two Todo, two In Progress and one Done. Native Wiki expansion remains in progress.
+**Official source releases:** [Six published v0.1.0 versions](./knowledge-base/releases.md) · [Public roadmap and verified browser screenshots](https://dicureck.github.io/roadmap.html). The [public Engineering Board](https://github.com/users/Dicureck/projects/1/views/2) is configured with five linked GitHub Issues: two Todo, two In Progress and one Done. The [native Engineering Wiki](https://github.com/Dicureck/Dicureck/wiki) now includes eight synchronized engineering tutorials alongside the original Home and SQL Performance pages.

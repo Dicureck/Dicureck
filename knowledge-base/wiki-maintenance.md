@@ -1,40 +1,36 @@
-# Wiki & Documentation Maintenance
+# Native GitHub Wiki | Protected Synchronization
 
-**Canonical source:** the Markdown guides under [knowledge-base/](https://github.com/Dicureck/Dicureck/tree/main/knowledge-base).
+**Status: Published and verified.** The [GitHub Actions run](https://github.com/Dicureck/Dicureck/actions/runs/38824211359) succeeded, including offline tests and a Git push to the separate Wiki repository.
 
-**Native Wiki:** [GitHub Wiki](https://github.com/Dicureck/Dicureck/wiki) uses a separate repository behind GitHub's Wiki feature. Changes to the knowledge base do **not** automatically appear as edits to native Wiki pages.
+The detailed source of truth remains [knowledge-base/](https://github.com/Dicureck/Dicureck/tree/main/knowledge-base). Eight hand-curated summaries under [wiki-pages/](https://github.com/Dicureck/Dicureck/tree/main/wiki-pages) are synchronized to the native [Engineering Wiki](https://github.com/Dicureck/Dicureck/wiki).
 
-## How navigation is organized
+## Which pages are protected?
 
-- The profile README links to canonical guides and labs.
-- This index organizes all technical subjects and the project roadmap.
-- The native Wiki sidebar may link directly to canonical pages.
-- Native Wiki pages can serve as readable summaries, but must be updated separately if copied.
+The original user-authored **[Home](https://github.com/Dicureck/Dicureck/wiki/Home)** and **[SQL Performance](https://github.com/Dicureck/Dicureck/wiki/SQL-Performance)** remain manually editable and are **never overwritten** by the workflow. Other existing pages are preserved too.
 
-## Editorial standards
+The Wiki sidebar keeps all handwritten text; the automation appends or refreshes **only the block between its two explicit START/END markers**.
 
-1. Write for an engineer encountering the problem for the first time.
-2. Introduce preconditions and known limitations near the beginning.
-3. Make runnable snippets standalone or clearly mark them illustrative.
-4. Use synthetic records and neutral object names.
-5. Keep external behavior (email send, deployment, DML) opt-in and reviewed.
-6. Distinguish offline unit tests from integration or production evidence.
-7. Check relative links whenever pages move or are renamed.
+## Automatically managed native tutorials
 
-## Wiki pages that already exist
+- [SQL Server → Oracle](https://github.com/Dicureck/Dicureck/wiki/Database-Migration)
+- [Data Quality](https://github.com/Dicureck/Dicureck/wiki/Data-Quality)
+- [Python & pandas](https://github.com/Dicureck/Dicureck/wiki/Python-Pandas)
+- [Analytics Engineering](https://github.com/Dicureck/Dicureck/wiki/Analytics-Engineering)
+- [AI & Business Automation](https://github.com/Dicureck/Dicureck/wiki/AI-Automation)
+- [Enterprise Reporting / C#](https://github.com/Dicureck/Dicureck/wiki/Enterprise-Reporting)
+- [BI Reporting Platforms](https://github.com/Dicureck/Dicureck/wiki/Reporting-Platforms)
+- [Engineering Roadmap](https://github.com/Dicureck/Dicureck/wiki/Engineering-Roadmap)
 
-The user-authored native [Home](https://github.com/Dicureck/Dicureck/wiki/Home), [SQL Performance](https://github.com/Dicureck/Dicureck/wiki/SQL-Performance) and sidebar are separate from this repository. Treat the native Wiki as a navigation portal while canonical technical notes remain in `knowledge-base/`. Do not assume template files automatically update the Wiki.
+## How edits work
 
-**Curated templates:** [Home](../wiki-starter/Home.md) · [Sidebar](../wiki-starter/_Sidebar.md) · [Database Migration](../wiki-starter/Database-Migration.md) · [Data Quality](../wiki-starter/Data-Quality.md). These are source-controlled proposals, **not proof of native Wiki publication**.
+To modify **Home** or **SQL Performance**, use GitHub's native Wiki editor as before.
 
-## Publishing cadence
+To modify any of the **eight managed pages**, edit the corresponding Markdown document in [wiki-pages/](https://github.com/Dicureck/Dicureck/tree/main/wiki-pages) on the default branch. Changes trigger the [Wiki Sync workflow](https://github.com/Dicureck/Dicureck/actions/workflows/wiki-sync.yml). **Do not edit managed Wiki pages only in the Wiki UI**, because the next synchronization overwrites those sections.
 
-Documentation updates can be reviewed in a GitHub commit. Native Wiki changes require a separate GitHub Wiki editor or an authorized browser/Git workflow; this project does not claim the two repositories are automatically synced.
+The Python script [sync_wiki.py](https://github.com/Dicureck/Dicureck/blob/main/scripts/sync_wiki.py) edits an explicit file allowlist; it does not delete pages. Its unit tests preserve original content and confirm that repeated runs with unchanged files are idempotent. The workflow uses GitHub's repository-scoped Actions token, not a committed access key.
 
-[Home](README.md) · [Roadmap](portfolio-roadmap.md).
+## Engineering publication standards
 
----
+Document preconditions, observed evidence, explicit limitations, privacy-safe synthetic examples and links to tested code. Avoid treating standalone offline CI as proof of production integration.
 
-[← Knowledge Base index](README.md) · [Engineering portfolio](https://dicureck.github.io/) · [GitHub profile](https://github.com/Dicureck)
-
-*Melissa Castro · Independent, synthetic examples only. Not client or production material.*
+[Canonical documentation](README.md) · [Public Board](https://github.com/users/Dicureck/projects/1/views/2) · [Verified first sync run](https://github.com/Dicureck/Dicureck/actions/runs/38824211359).

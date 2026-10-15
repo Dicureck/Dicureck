@@ -18,7 +18,7 @@ Six independent repositories now have [official tagged releases](knowledge-base/
 - [ ] Expand SQL Server benchmarks with actual plans, logical reads and repeated independent trials
 - [ ] Run SQL Server → Oracle comparison in authorized isolated instances and validate result multiset equivalence
 - [ ] Publish actual Power BI / Tableau / RDL demonstrations after runtime validation and licensing checks
-- [ ] Add native GitHub Wiki pages for expanded technical sections (separate Git repo / edit workflow)
+- [x] Synchronize [eight native GitHub Wiki tutorials](https://github.com/Dicureck/Dicureck/wiki) with [protected GitHub Actions](https://github.com/Dicureck/Dicureck/actions/runs/38824211359), preserving the original Home and SQL Performance pages
 - [x] Publish [six native GitHub Releases v0.1.0](knowledge-base/releases.md) from CI-verified source
 - [x] Create the [public GitHub Engineering Board](https://github.com/users/Dicureck/projects/1)
 - [x] Import existing Issues #7–#11, configure Todo / In Progress / Done statuses, and arrange them on the [public Engineering Board](https://github.com/users/Dicureck/projects/1/views/2); [board documentation](knowledge-base/projects-board-setup.md)
