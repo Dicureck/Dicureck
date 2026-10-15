@@ -107,7 +107,42 @@ public static class Program
             throw new Exception("Negative value was accepted");
         }
         catch (FormatException) { /* expected */ }
-        Console.WriteLine("PASS: deterministic decimal validation and aggregation");
+        // Exercise the real CSV parser with synthetic temporary fixtures.
+        // No customer datasets, services, network calls or persistent files.
+        var fixturePath = Path.GetTempFileName();
+        try
+        {
+            File.WriteAllText(fixturePath,
+                "order_id,business_unit,revenue,cost\n" +
+                "T001,\"North, Regional\",25.50,8.25\n");
+            var parsed = Engine.ReadCsv(fixturePath);
+            if (parsed.Count != 1 || parsed[0].Unit != "North, Regional" ||
+                parsed[0].Revenue != 25.50m)
+                throw new Exception("Quoted CSV fields parsed incorrectly");
+
+            File.WriteAllText(fixturePath,
+                "order_id,business_unit,revenue,cost\n" +
+                "T001,North,10.00,2.00\nT001,South,8.00,1.00\n");
+            try
+            {
+                Engine.ReadCsv(fixturePath);
+                throw new Exception("Duplicate IDs were incorrectly accepted");
+            }
+            catch (FormatException) { /* expected */ }
+
+            File.WriteAllText(fixturePath, "wrong,header\nT001,North,10.00,2.00\n");
+            try
+            {
+                Engine.ReadCsv(fixturePath);
+                throw new Exception("Invalid CSV header was incorrectly accepted");
+            }
+            catch (FormatException) { /* expected */ }
+        }
+        finally
+        {
+            File.Delete(fixturePath);
+        }
+        Console.WriteLine("PASS: quoted CSV parsing, duplicate rejection and header validation");
         return 0;
     }
 }
