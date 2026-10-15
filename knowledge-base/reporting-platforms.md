@@ -1,6 +1,6 @@
 # Reporting Engineering | Power BI, Tableau, SSRS & Crystal Reports
 
-**Status:** methodology and original design notes. Do not interpret this page as evidence that native Tableau, Crystal Reports or RDL project files have been published.
+**Status:** original platform methodology and a new [Enterprise BI Lab](../engineering-labs/enterprise-bi-reporting/README.md) now include a real **RDL source file**, a shared synthetic fixture, DAX measures and Tableau calculations. The RDL is statically validated; no Report Builder/SSRS render, Tableau workbook or Power BI PBIX has been runtime-tested.
 
 ## 01 · Choose the delivery format
 
@@ -35,7 +35,7 @@
 
 An excellent portfolio artifact includes a clean, synthetic dataset, model documentation, a screenshot/video preview, original formulas, known limitations, and—when licensing allows—a runnable workbook/report.
 
-Until those artifacts are available, label a platform as **planned or methodology-only**, not shipped.
+The RDL and calculation sources are now **shipped as original examples**. Mark native render/export results as **pending** until independently tested.
 
 Related: [Analytics Engineering](analytics-engineering.md) · [Reporting & Automation roadmap](reporting-and-automation.md).
 

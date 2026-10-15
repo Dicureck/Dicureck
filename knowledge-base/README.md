@@ -6,7 +6,7 @@
 
 This **version-controlled knowledge base** contains the detailed technical guides. The [interactive portfolio](https://dicureck.github.io/) links to a [native GitHub Wiki](https://github.com/Dicureck/Dicureck/wiki) whose eight curated tutorial pages are now synchronized from [wiki-pages/](../wiki-pages) by [GitHub Actions](https://github.com/Dicureck/Dicureck/actions/workflows/wiki-sync.yml). Manually authored Home and SQL Performance pages remain protected.
 
-**New:** [Three case studies](../case-studies/README.md) · [Python & AI demo](../engineering-labs/ai-business-automation/README.md) · [C# reporting demo](../engineering-labs/enterprise-reporting-dotnet/README.md) · [Power BI / Tableau calculation examples](bi-examples.md) · [Public roadmap](../ROADMAP.md)
+**New:** [Enterprise BI reporting lab](../engineering-labs/enterprise-bi-reporting/README.md) · [Three case studies](../case-studies/README.md) · [Python & AI demo](../engineering-labs/ai-business-automation/README.md) · [C# reporting demo](../engineering-labs/enterprise-reporting-dotnet/README.md) · [Power BI / Tableau calculation examples](bi-examples.md) · [Public roadmap](../ROADMAP.md)
 
 ## Explore the engineering playbook
 
@@ -17,7 +17,7 @@ This **version-controlled knowledge base** contains the detailed technical guide
 | Data quality | [Contracts, validation and multiset reconciliation](data-quality.md) | [Data Quality Toolkit](https://github.com/Dicureck/data-quality-toolkit) |
 | Python & pandas | [Reproducible data pipelines and tests](python-pandas.md) | [Logistics](https://github.com/Dicureck/logistics-route-intelligence) · [Finance](https://github.com/Dicureck/financial-intelligence-lab) |
 | Analytics Engineering | [Metrics, semantic models and dashboards](analytics-engineering.md) | [Incident Intelligence](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales) |
-| Reporting Platforms | [Power BI, Tableau, SSRS, Crystal](reporting-platforms.md) | Platform-specific artifacts are a documented roadmap |
+| Reporting Platforms | [Power BI, Tableau, SSRS, Crystal](reporting-platforms.md) | [Original RDL + DAX/Tableau examples](../engineering-labs/enterprise-bi-reporting/README.md); native runtimes unverified |
 | C# / .NET | [Typed reporting application blueprint](csharp-dotnet.md) | [Runnable .NET 8 lab with CI](../engineering-labs/enterprise-reporting-dotnet/README.md) |
 | AI & Automation | [Secure workflows, approval and dry runs](ai-automation.md) | [Offline Python automation lab](../engineering-labs/ai-business-automation/README.md) |
 | Reporting Roadmap | [Published artifacts vs planned work](reporting-and-automation.md) | [Portfolio roadmap](portfolio-roadmap.md) |

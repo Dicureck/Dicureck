@@ -121,6 +121,7 @@ New independent sample applications and source-backed reporting explanations:
 | Engineering demonstration | Interactive showcase |
 |---|---|
 | [Python · AI & Business Automation](./engineering-labs/ai-business-automation/README.md) — synthetic JSON/HTML reports, unsent mail previews, approval-gated optional model API calls | [Technical case study](./case-studies/ai-automation.md) |
+| [Enterprise BI & Reporting](./engineering-labs/enterprise-bi-reporting/README.md) — 72-row synthetic data contract, reconciled Python dashboard, SQL, parameterized RDL, DAX and Tableau calculations | [Case study](./case-studies/enterprise-bi-reporting.md) |
 | [C# · .NET Enterprise Reporting](./engineering-labs/enterprise-reporting-dotnet/README.md) — typed CSV parser, decimal reporting, self-tests and CI | [Technical case study](./case-studies/enterprise-reporting.md) |
 | [Logistics Case Study](./case-studies/logistics.md) | [Live dashboard](https://dicureck.github.io/?demo=logistics#lab) |
 | [Finance Case Study](./case-studies/finance.md) | [Live dashboard](https://dicureck.github.io/?demo=finance#lab) |

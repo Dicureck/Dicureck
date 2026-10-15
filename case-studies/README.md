@@ -13,6 +13,7 @@
 | Study | Published implementation | Verification boundary |
 |---|---|---|
 | [AI & Business Automation](ai-automation.md) | [Python source](../engineering-labs/ai-business-automation/README.md) | Offline tests; no real emails |
+| [Enterprise BI & Reporting](enterprise-bi-reporting.md) | [72-row Python/SQL/RDL/DAX lab](../engineering-labs/enterprise-bi-reporting/README.md) | Source-consistent inputs and XML tests; native BI runtimes pending |
 | [Enterprise Reporting & C#](enterprise-reporting.md) | [.NET 8 source](../engineering-labs/enterprise-reporting-dotnet/README.md) | CI build and synthetic JSON |
 
 The interactive website generates a deterministic local sample. The corresponding repository projects may use separate independently generated synthetic fixtures. **Numbers and outputs are not claimed to match across independent demos unless a specific reconciliation test has been run.**
