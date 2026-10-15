@@ -50,3 +50,32 @@ jobs:
           name: synthetic-dotnet-report
           path: output/dotnet-report.json
           retention-days: 7
+  enterprise_bi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate synthetic data, RDL, SQL, DAX and Tableau contract
+        run: python -m unittest discover -s engineering-labs/enterprise-bi-reporting/tests -v
+      - name: Produce original offline dashboard and report
+        run: python engineering-labs/enterprise-bi-reporting/src/report.py --out output/enterprise-bi
+      - name: Verify generated output structure
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          out = Path('output/enterprise-bi')
+          result = json.loads((out / 'report.json').read_text(encoding='utf-8'))
+          assert result['overall']['orders'] == 72
+          assert len(result['by_month_region']) == 12
+          assert (out / 'dashboard.html').stat().st_size > 3000
+          print('Synthetic Enterprise BI report generated and reconciled')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-enterprise-bi-dashboard
+          path: output/enterprise-bi/
+          retention-days: 14
