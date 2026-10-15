@@ -1,0 +1,73 @@
+name: Native Wiki Tutorials Sync
+on:
+  push:
+    branches: [main]
+    paths:
+      - "wiki-pages/**"
+      - "scripts/sync_wiki.py"
+      - "tests/wiki/**"
+      - ".github/workflows/wiki-sync.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-author-maintained-native-wiki
+  cancel-in-progress: false
+
+jobs:
+  publish-curated-tutorials:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Wiki overlay behavior locally
+        run: python -m unittest discover -s tests/wiki -v
+      - name: Clone existing Wiki and synchronize eight curated pages
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          export GIT_TERMINAL_PROMPT=0
+          WIKI_DIR="$RUNNER_TEMP/native-wiki"
+          AUTH_HEADER="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          git -c "http.https://github.com/.extraheader=$AUTH_HEADER" clone --quiet \
+            "https://github.com/$GITHUB_REPOSITORY.wiki.git" "$WIKI_DIR"
+          test -f "$WIKI_DIR/Home.md" || { echo "Existing Home page missing; cancel"; exit 1; }
+          test -f "$WIKI_DIR/SQL-Performance.md" || { echo "Existing SQL Performance page missing; cancel"; exit 1; }
+          cp "$WIKI_DIR/Home.md" "$RUNNER_TEMP/wiki-home-before.md"
+          cp "$WIKI_DIR/SQL-Performance.md" "$RUNNER_TEMP/wiki-sql-before.md"
+          if test -f "$WIKI_DIR/_Sidebar.md"; then
+            cp "$WIKI_DIR/_Sidebar.md" "$RUNNER_TEMP/wiki-sidebar-before.md"
+          fi
+          python scripts/sync_wiki.py --source wiki-pages --target "$WIKI_DIR"
+          cmp -s "$RUNNER_TEMP/wiki-home-before.md" "$WIKI_DIR/Home.md"
+          cmp -s "$RUNNER_TEMP/wiki-sql-before.md" "$WIKI_DIR/SQL-Performance.md"
+          git -C "$WIKI_DIR" config user.name "github-actions[bot]"
+          git -C "$WIKI_DIR" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$WIKI_DIR" add -- _Sidebar.md Database-Migration.md Data-Quality.md \
+            Python-Pandas.md Analytics-Engineering.md AI-Automation.md \
+            Enterprise-Reporting.md Reporting-Platforms.md Engineering-Roadmap.md
+          if git -C "$WIKI_DIR" diff --staged --quiet; then
+            echo "The native Wiki is already current."
+            exit 0
+          fi
+          git -C "$WIKI_DIR" commit --quiet -m "Synchronize curated engineering Wiki tutorials"
+          BRANCH="$(git -C "$WIKI_DIR" branch --show-current)"
+          test -n "$BRANCH"
+          git -c "http.https://github.com/.extraheader=$AUTH_HEADER" \
+            -C "$WIKI_DIR" push --quiet origin "HEAD:$BRANCH"
+          echo "Wiki tutorials synchronized; Home and SQL Performance untouched."
+      - name: Preserve original author pages as workflow evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-manual-wiki-pages-before-sync
+          path: |
+            ${{ runner.temp }}/wiki-home-before.md
+            ${{ runner.temp }}/wiki-sql-before.md
+            ${{ runner.temp }}/wiki-sidebar-before.md
+          if-no-files-found: ignore
+          retention-days: 7
