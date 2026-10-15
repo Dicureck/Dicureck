@@ -1,0 +1,11 @@
+-- Power BI measures (illustrative): import exactly the synthetic sales.csv as FactSyntheticSales.
+-- revenue_su, cost_su and budget_su: fixed decimal. sale_date: Date. One row per order.
+Orders = COUNTROWS ( FactSyntheticSales )
+Revenue SU = SUM ( FactSyntheticSales[revenue_su] )
+Cost SU = SUM ( FactSyntheticSales[cost_su] )
+Budget SU = SUM ( FactSyntheticSales[budget_su] )
+Margin SU = [Revenue SU] - [Cost SU]
+Margin % = DIVIDE ( [Margin SU], [Revenue SU] )
+Budget Variance SU = [Revenue SU] - [Budget SU]
+Budget Variance % = DIVIDE ( [Budget Variance SU], [Budget SU] )
+-- Use exact numerator/denominator filter scope. A zero denominator returns BLANK.
