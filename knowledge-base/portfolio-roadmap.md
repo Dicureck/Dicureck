@@ -40,3 +40,14 @@ The native GitHub Wiki is separate from the repository. These version-controlled
 [← Knowledge Base index](README.md) · [Engineering portfolio](https://dicureck.github.io/) · [GitHub profile](https://github.com/Dicureck)
 
 *Melissa Castro · Independent, synthetic examples only. Not client or production material.*
+
+## Public engineering backlog
+
+These issues are the trackable implementation and verification gates for the next portfolio phase. Opening an issue means the work is **planned**, not finished.
+
+- [SQL Server runtime benchmark validation](https://github.com/Dicureck/Dicureck/issues/7)
+- [Oracle cross-engine integration](https://github.com/Dicureck/Dicureck/issues/9)
+- [Native reporting assets and case studies](https://github.com/Dicureck/Dicureck/issues/8)
+- [Native Wiki synchronization and public Projects board](https://github.com/Dicureck/Dicureck/issues/10)
+
+**Note:** The AI Business Automation Lab and Enterprise Reporting .NET code are currently housed in the profile repository's [engineering-labs](https://github.com/Dicureck/Dicureck/tree/main/engineering-labs) directory. Their offline CI checks are distinct from live provider, email, database and proprietary reporting product integrations.
