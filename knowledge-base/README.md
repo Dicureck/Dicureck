@@ -11,7 +11,7 @@ This is the source-controlled home for Melissa Castro's engineering field notes,
 | SQL performance | [Query optimization & trustworthy benchmarks](sql-performance.md) | [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab) |
 | Database modernization | [SQL Server → Oracle migration engineering](database-migration.md) | [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) |
 | Data quality | [Validation and reproducibility](data-quality.md) | [Data Quality Toolkit](https://github.com/Dicureck/data-quality-toolkit) |
-| Analytics | [From business questions to decision systems](analytics-engineering.md) | [Logistics Intelligence](https://github.com/Dicureck/logistics-route-intelligence) · [Financial Intelligence](https://github.com/Dicureck/financial-intelligence-lab) |
+| Analytics | [From business questions to decision systems](analytics-engineering.md) | [Logistics Intelligence](https://github.com/Dicureck/logistics-route-intelligence) · [Financial Intelligence](https://github.com/Dicureck/financial-intelligence-lab) · [Incident Intelligence](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales) |
 | Governance | [Safe public engineering portfolios](portfolio-standards.md) | Applies to all repositories |
 | Reporting platforms & AI automation | [Responsible technical roadmap](reporting-and-automation.md) | Tableau, Crystal Reports, Report Builder, C# and AI integrations (planned) |
 | Roadmap | [Public portfolio roadmap](portfolio-roadmap.md) | Project status and publication standards |
