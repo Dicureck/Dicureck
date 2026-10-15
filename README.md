@@ -26,15 +26,15 @@
 
 ### `01 / ENGINEERING PROFILE`
 
-I build solutions at the intersection of **data analytics, database engineering, business intelligence, and process improvement**. My work spans SQL analysis and optimization, SQL Server → Oracle modernization, operational reporting, and decision-focused dashboards.
+I turn complex data into clear, useful information. My work brings together **data analytics, business intelligence, database engineering, and automation**—from improving SQL performance and supporting SQL Server-to-Oracle migrations to building dashboards for business teams.
 
-**My engineering principles:** verify the underlying data, define the business contract, document trade-offs, test repeatably, and communicate results with appropriate limitations.
+**How I work:** I clarify the goal, check the data, and build solutions that can be tested, explained, and maintained.
 
-> **Engineering clarity from complexity.** Useful systems are reliable, understandable, and built for real decisions.
+> **Clarity from complexity.** Reliable data, thoughtful engineering, better decisions.
 
 ### `02 / PROGRAMMING & QUERY LANGUAGES`
 
-**Programming, scripting & automation** · clickable badges lead to code when available.
+**Programming & scripting** — select a badge to explore public code examples where available.
 
 <p>
   <a href="https://github.com/Dicureck/sql-performance-lab/tree/main/src/perf_lab"><img src="https://img.shields.io/badge/Python-142947?style=for-the-badge&logo=python&logoColor=53D6FF" alt="Python examples"/></a>
@@ -43,7 +43,7 @@ I build solutions at the intersection of **data analytics, database engineering,
   <img src="https://img.shields.io/badge/Java-142947?style=for-the-badge&logo=openjdk&logoColor=9CCFFF" alt="Java familiarity"/>
 </p>
 
-**Database & query languages**
+**SQL & database languages**
 
 <p>
   <a href="https://github.com/Dicureck/sql-performance-lab/tree/main/sql"><img src="https://img.shields.io/badge/T--SQL-211C3A?style=for-the-badge&logo=microsoftsqlserver&logoColor=B9A0FF" alt="T-SQL examples"/></a>
@@ -51,7 +51,7 @@ I build solutions at the intersection of **data analytics, database engineering,
   <a href="https://github.com/Dicureck/sql-performance-lab/tree/main/sql"><img src="https://img.shields.io/badge/SQL-211C3A?style=for-the-badge&logo=postgresql&logoColor=B9A0FF" alt="SQL examples"/></a>
 </p>
 
-**Analytics, databases & tooling**
+**Analytics & development tools**
 
 <p>
   <img src="https://img.shields.io/badge/SQL_Server-123346?style=flat-square&logo=microsoftsqlserver&logoColor=53D6FF" alt="SQL Server" />
@@ -65,42 +65,42 @@ I build solutions at the intersection of **data analytics, database engineering,
   <img src="https://img.shields.io/badge/Jupyter-123346?style=flat-square&logo=jupyter&logoColor=53D6FF" alt="Jupyter" />
 </p>
 
-**Reporting engineering & responsible automation (next demonstrations)**
+**Reporting & automation — planned projects**
 
 [Tableau · Crystal Reports · Report Builder · C# · ChatGPT / Claude workflows · automated reporting](./knowledge-base/reporting-and-automation.md)
 
-<sub>C# and Java represent additional familiarity, not currently published application case studies. Technology badges represent tools and practices; repository language statistics below only describe public code.</sub>
+<sub>C# and Java are part of my technical background; dedicated public examples are not available yet. The language statistics below reflect code in public repositories, not my overall experience.</sub>
 
 ### `03 / FEATURED ENGINEERING LABS`
 
-**Independent public demonstrations** — built with synthetic data and original examples, separate from proprietary enterprise work.
+Independent, open-source demonstrations built with **synthetic data** and original code. They showcase engineering methods without exposing client systems.
 
 | Project | Engineering focus | Verification |
 |:--|:--|:--|
-| **[SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab)** | Query optimization, reproducible T-SQL scenarios, result-set integrity checks, benchmark methodology | [![SQL Lab CI](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml) |
-| **[Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit)** | T-SQL → PL/SQL review, dependency planning, data-contract checks, CSV reconciliation | [![Oracle Toolkit CI](https://github.com/Dicureck/oracle-migration-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/oracle-migration-toolkit/actions/workflows/ci.yml) |
-| **[Logistics & Route Intelligence](https://github.com/Dicureck/logistics-route-intelligence)** | Synthetic delivery operations, SLA contracts, geofences and reproducible offline dashboard | [![Logistics CI](https://github.com/Dicureck/logistics-route-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/logistics-route-intelligence/actions/workflows/ci.yml) |
-| **[Financial Intelligence Lab](https://github.com/Dicureck/financial-intelligence-lab)** | Auditable fictional P&L, operating margins, budget variances and BI modeling | [![Financial CI](https://github.com/Dicureck/financial-intelligence-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/financial-intelligence-lab/actions/workflows/ci.yml) |
-| **[Data Quality Toolkit](https://github.com/Dicureck/data-quality-toolkit)** | Data contracts, validation gates, duplicate-aware reconciliation and CLI evidence | [![Quality CI](https://github.com/Dicureck/data-quality-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/data-quality-toolkit/actions/workflows/ci.yml) |
-| **[Incident Intelligence](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales)** | Incident SLA contracts, backlog aging, time-based reporting and original synthetic dashboard | [![Incident CI](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales/actions/workflows/ci.yml) |
-| **[Secret Friend](https://github.com/Dicureck/challenge-amigo-secreto-esp_main)** | Client-side JavaScript, input validation, randomized selection | [Source code](https://github.com/Dicureck/challenge-amigo-secreto-esp_main/blob/main/app.js) |
+| **[SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab)** | SQL optimization exercises, result-set checks, and a repeatable benchmarking workflow | [![SQL Lab CI](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml) |
+| **[Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit)** | T-SQL-to-PL/SQL migration review, dependency planning, and data reconciliation | [![Oracle Toolkit CI](https://github.com/Dicureck/oracle-migration-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/oracle-migration-toolkit/actions/workflows/ci.yml) |
+| **[Logistics & Route Intelligence](https://github.com/Dicureck/logistics-route-intelligence)** | Route analytics, geofence logic, delivery KPIs, and an offline dashboard | [![Logistics CI](https://github.com/Dicureck/logistics-route-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/logistics-route-intelligence/actions/workflows/ci.yml) |
+| **[Financial Intelligence Lab](https://github.com/Dicureck/financial-intelligence-lab)** | Synthetic profit-and-loss reporting, margins, budget comparisons, and BI modeling | [![Financial CI](https://github.com/Dicureck/financial-intelligence-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/financial-intelligence-lab/actions/workflows/ci.yml) |
+| **[Data Quality Toolkit](https://github.com/Dicureck/data-quality-toolkit)** | Data validation, duplicate-aware comparisons, and command-line tests | [![Quality CI](https://github.com/Dicureck/data-quality-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/data-quality-toolkit/actions/workflows/ci.yml) |
+| **[Incident Intelligence](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales)** | SLA tracking, backlog analysis, and a dashboard built from synthetic incidents | [![Incident CI](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales/actions/workflows/ci.yml) |
+| **[Secret Friend](https://github.com/Dicureck/challenge-amigo-secreto-esp_main)** | Browser-based JavaScript with input validation and a random draw | [Source code](https://github.com/Dicureck/challenge-amigo-secreto-esp_main/blob/main/app.js) |
 
-**Next demonstrations:** advanced BI reporting (Tableau / Crystal Reports / Report Builder), responsible AI-assisted web development, and email/process automation. [Track their actual status](./knowledge-base/portfolio-roadmap.md).
+**Coming next:** BI reporting with Tableau, Crystal Reports, and Report Builder; AI-assisted web development; and email and workflow automation. [See the project roadmap](./knowledge-base/portfolio-roadmap.md).
 
 ### `04 / PROFESSIONAL FOCUS`
 
 | Domain | Engineering contribution |
 |:--|:--|
-| **SQL performance** | Query analysis, stored-procedure optimization, controlled comparisons, and regression checks. |
-| **Database modernization** | Object conversion, dependency assessment, migration validation, and PL/SQL compatibility review. |
-| **Business intelligence** | KPI definitions, dashboarding, productivity analysis, and operational/financial reporting. |
-| **Automation & data quality** | Reproducible checks, consistency analysis, and validation-driven workflows. |
+| **SQL performance** | Analyzing slow queries, optimizing stored procedures, and checking that results remain correct. |
+| **Database modernization** | Reviewing dependencies, translating database objects, and validating migration plans. |
+| **Business intelligence** | Defining KPIs, analyzing operations and finances, and building decision-ready dashboards. |
+| **Automation & data quality** | Automating repetitive checks and improving the reliability of data workflows. |
 
-Professional experience is summarized at a high level. **No client source, business data, production configuration, or confidential measurements appear in these repositories.**
+These summaries describe professional experience without revealing client details. **All public labs use original examples and synthetic data—not client code or production information.**
 
 ### `05 / ENGINEERING KNOWLEDGE BASE`
 
-An evolving, version-controlled **technical Wiki-style playbook** with decision frameworks, checklists, and links to working public labs.
+Practical engineering notes, checklists, and decisions—with links to working code. This knowledge base is version-controlled alongside the portfolio.
 
 <table>
   <tr><td>⚡ <a href="./knowledge-base/sql-performance.md"><b>Performance Engineering</b></a></td><td>🔁 <a href="./knowledge-base/database-migration.md"><b>Database Migration</b></a></td></tr>
@@ -111,10 +111,10 @@ An evolving, version-controlled **technical Wiki-style playbook** with decision 
 
 <p align="center"><a href="./knowledge-base/README.md"><img src="https://img.shields.io/badge/OPEN-ENGINEERING_KNOWLEDGE_BASE-172447?style=for-the-badge&logo=readthedocs&logoColor=53D6FF" alt="Open engineering knowledge base"/></a></p>
 
-### `06 / VERIFIED GITHUB TELEMETRY`
+### `06 / GITHUB ACTIVITY & METRICS`
 
 <p align="center">
-  <img src="./assets/telemetry.svg" alt="Live public repository count, star count, and repository code-language distribution" width="98%" />
+  <img src="./assets/telemetry.svg" alt="Daily snapshot of public repositories, stars, and code-language distribution" width="98%" />
 </p>
 
 <p align="center">
@@ -123,30 +123,30 @@ An evolving, version-controlled **technical Wiki-style playbook** with decision 
   <a href="https://github.com/Dicureck/Dicureck/actions/workflows/telemetry.yml"><img src="https://github.com/Dicureck/Dicureck/actions/workflows/telemetry.yml/badge.svg" alt="Telemetry refresh workflow status"/></a>
 </p>
 
-<sub>Stats are generated daily from GitHub's public API by [a version-controlled Python script](./scripts/refresh_telemetry.py), not from a third-party chart provider. Repository language percentages use code-byte counts, not professional proficiency or career contribution. The initial placeholder updates after the first successful workflow run.</sub>
+<sub>This panel is updated daily using [a Python script](./scripts/refresh_telemetry.py) and GitHub's public API. Language percentages are based on public repository file sizes; they do not measure skill or professional experience. CI badges indicate automated checks, not production certification.</sub>
 
-### `07 / HOW I ENGINEER SOLUTIONS`
+### `07 / MY WORKFLOW`
 
 ```text
 BUSINESS QUESTION
        │
        ▼
-DATA DISCOVERY / VALIDATION
+UNDERSTAND & VALIDATE DATA
        │
        ▼
-SQL · PYTHON · DATA MODELING
+DESIGN & BUILD
        │
        ▼
-QUALITY & REPRODUCIBILITY CHECKS
+TEST & DOCUMENT
        │
        ▼
-INSIGHTS · AUTOMATION · DECISIONS
+DELIVER INSIGHTS & AUTOMATION
 ```
 
 ### `08 / LET'S BUILD SOMETHING USEFUL`
 
-I value engineering that is measurable, understandable, secure, and maintainable.
+I enjoy building data tools that solve practical problems—and making them clear enough for others to use and maintain.
 
 **Explore:** [Projects](https://github.com/Dicureck?tab=repositories) · [Engineering notes](./knowledge-base/README.md) · **Business inquiries:** [info@intebi.online](mailto:info@intebi.online)
 
-<p align="center"><sub>Designed for impact. Engineered with intention. · Melissa Castro · Guatemala</sub></p>
+<p align="center"><sub>Built with curiosity, care, and attention to detail. · Melissa Castro · Guatemala</sub></p>
