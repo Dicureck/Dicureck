@@ -1,27 +1,67 @@
-# Data Quality & Validation Patterns
+# Data Quality Engineering
 
-A data product is credible when another engineer can independently reproduce its output and verify the business assumptions.
+**Focus:** data contracts · schema drift · validation · duplicate-aware reconciliation
 
-## Five useful layers
+A data pipeline is trustworthy when another engineer can verify both its assumptions and its output.
 
-| Layer | Example question | Typical check |
-| --- | --- | --- |
-| Schema | Did the shape change? | Required columns, types, keys |
-| Completeness | Is anything missing? | Null coverage, expected date range |
-| Integrity | Are relationships consistent? | Unique IDs and foreign-key checks |
-| Semantics | Does the calculation still mean the same? | Rule-level fixtures and boundary cases |
-| Reconciliation | Do two implementations return the same records? | Complete-row multiset comparison |
+## 01 · Quality gates
 
-## Duplicate-aware reconciliation
+| Gate | Example | Failure behavior |
+|---|---|---|
+| Schema | Required columns and types | Reject unknown/broken schema |
+| Completeness | Mandatory IDs and timestamps | Reject missing critical fields |
+| Uniqueness | One row per declared key | Report duplicate keys |
+| Referential integrity | Orders refer to valid customers | Report orphan records |
+| Business semantics | Nonnegative units, valid event status | Flag invalid records |
+| Reconciliation | Old and new complete outputs agree | Fail on missing/extra duplicates |
 
-Ordinary set equality can silently ignore multiplicity. A safer comparison counts each canonical row and diffs those counters. When using CSV, preserve column order and specify explicit rules for `NULL`, date formatting, decimals, and encoding before comparing.
+## 02 · Duplicate-aware Python example
 
-## Release gates
+These are fictional records, represented as tuples with explicit column order.
 
-- Declare the source of truth and data provenance.
-- Use generated test data without personal identifiers.
-- Keep inputs, assertions, and expected outputs version controlled.
-- Publish limitations and explain every excluded condition.
-- Avoid actual credentials, employee data, client identifiers, and production endpoints.
+~~~python
+from collections import Counter
 
-**See also:** [SQL performance](sql-performance.md) · [Database migration](database-migration.md)
+before = [
+    ("A100", "2026-01-01", "19.90"),
+    ("A100", "2026-01-01", "19.90"),
+    ("A200", "2026-01-02", "15.00"),
+]
+after = [
+    ("A100", "2026-01-01", "19.90"),
+    ("A200", "2026-01-02", "15.00"),
+    ("A200", "2026-01-02", "15.00"),
+]
+
+missing = Counter(before) - Counter(after)
+unexpected = Counter(after) - Counter(before)
+
+assert missing[("A100", "2026-01-01", "19.90")] == 1
+assert unexpected[("A200", "2026-01-02", "15.00")] == 1
+~~~
+
+Both inputs contain three rows, but they are **not equivalent**. Sets and aggregated totals could overlook this.
+
+## 03 · Canonicalization contract
+
+Before comparing exports, specify:
+- key and column order;
+- NULL versus empty string representation;
+- date/time formats and time zone;
+- decimal precision and rounding;
+- character normalization and whitespace policy;
+- case sensitivity and relevant collation rules.
+
+Do not trim, round or lowercase silently: doing so can hide real defects.
+
+## 04 · CI and release evidence
+
+Use tiny positive/negative fixtures, deterministic generators and exit codes that fail closed. Save validation summaries as inspectable JSON. Mask or omit sensitive values from logs. CI can prove that specific tests passed; it does not certify a deployment for production.
+
+**Companion:** [Data Quality Toolkit](https://github.com/Dicureck/data-quality-toolkit). See also [Python and pandas](python-pandas.md) and [SQL Performance](sql-performance.md).
+
+---
+
+[← Knowledge Base index](README.md) · [Engineering portfolio](https://dicureck.github.io/) · [GitHub profile](https://github.com/Dicureck)
+
+*Melissa Castro · Independent, synthetic examples only. Not client or production material.*

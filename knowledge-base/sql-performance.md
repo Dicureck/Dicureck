@@ -1,31 +1,87 @@
 # SQL Performance Engineering
 
-*Companion project: [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab).*
+**Focus:** T-SQL · SARGability · execution plans · correctness gates · repeatable measurements
 
-## A reliable optimization loop
+> Faster is useful only when the query still returns the right answer.
 
-1. State the intended result as a testable contract (keys, filters, null behavior, data types, ordering, and duplicate policy).
-2. Create synthetic datasets of realistic *shape*, including skew, sparse values, and edge cases.
-3. Capture a baseline **before** adding hints or indexes. Document engine version, cardinality, parameters, and query plan.
-4. Identify cost drivers: excessive scans, non-sargable predicates, row multiplication, poor estimates, sorts, and repeated computation.
-5. Change one hypothesis at a time, keeping a rollback path.
-6. Compare old and new outputs by a **multiset** of complete rows — totals and simple set equality can miss duplicated or missing records.
-7. Measure repeated runs and report median, spread, workload, cache effects, and hardware conditions.
+## 01 · An optimization workflow
 
-## Things not to claim
+1. Define the expected result: keys, columns, filters, NULL handling, tie-breaking and duplicate policy.
+2. Capture a baseline: input size, statistics, engine version, parameters, logical reads, CPU, elapsed time and execution plan.
+3. Identify one suspected cause of cost. Be wary of non-SARGable filters, row amplification and correlated repeated work.
+4. Apply an isolated change with a rollback plan.
+5. Compare complete results, including duplicate-row multiplicity.
+6. Repeat measurements under recorded conditions; report distributions instead of selecting one favorable run.
+7. Document what you tested and what remains unverified.
 
-- Faster execution from a static code review alone.
-- A universal percentage improvement from a single measurement.
-- Semantic equivalence from matching row counts or aggregated totals.
-- Production readiness based only on synthetic data.
+## 02 · Synthetic SQL Server example
 
-## Checklist
+Assume a fictional **dbo.sample_orders** table with a datetime2 order_date.
 
-- [ ] Functional contracts written down
-- [ ] Baseline and candidate executed under comparable conditions
-- [ ] Full-result and multiplicity checks pass
-- [ ] Query plans compared
-- [ ] Repeated measurements captured
-- [ ] Limitations and rollback documented
+Baseline:
+~~~sql
+DECLARE @date date = '2026-02-01';
 
-No proprietary stored procedures or client results are included here.
+SELECT order_id, customer_id, order_date
+FROM dbo.sample_orders
+WHERE CONVERT(date, order_date) = @date;
+~~~
+
+Candidate:
+~~~sql
+DECLARE @date date = '2026-02-01';
+
+SELECT order_id, customer_id, order_date
+FROM dbo.sample_orders
+WHERE order_date >= @date
+  AND order_date < DATEADD(day, 1, @date);
+~~~
+
+The second predicate is a straightforward half-open range and is typically easier to seek with a suitable index. SQL Server can optimize some CONVERT(date) patterns too; **do not claim speedup without the actual plan and measurements**.
+
+## 03 · Collect comparable evidence
+
+~~~sql
+SET STATISTICS IO ON;
+SET STATISTICS TIME ON;
+
+-- Run the baseline and candidate with comparable parameters.
+
+SET STATISTICS IO OFF;
+SET STATISTICS TIME OFF;
+~~~
+
+Capture actual execution plans where possible. Track logical reads, CPU, elapsed time, spills, memory grants and cardinality estimates. Note warm/cold cache, parameter sensitivity, concurrency and index changes. Never clear a shared server's cache just to improve a portfolio measurement.
+
+## 04 · Exactness before benchmarking
+
+Equal row counts and equal SUM values are insufficient. A valid comparison must catch:
+- missing rows and unexpected rows;
+- duplicated records with the wrong frequency;
+- altered NULL or numeric precision;
+- boundary-date differences;
+- order only where part of the contract.
+
+For SQL exports, normalize schema, data types and formatting with a documented policy, then compare complete-row counters. Hash totals alone are not proof of equivalence.
+
+## 05 · Publishing results responsibly
+
+A defensible benchmark includes environment/version, data volume, parameters, indexes, scripts, independent verification, all individual timings and summarized statistics such as median and p95. Differences between runs can come from cache or concurrency, not only the query change.
+
+**Companion lab:** [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab). Its public benchmark scripts require SQL Server execution. Offline test status must not be confused with measured runtime performance.
+
+## Review checklist
+
+- [ ] Query contract explicit
+- [ ] Indexes and statistics documented
+- [ ] Baseline and candidate plans captured
+- [ ] Complete row multisets equal
+- [ ] Warmup and timing policies disclosed
+- [ ] Raw timing records reproducible
+- [ ] Rollback and limitations recorded
+
+---
+
+[← Knowledge Base index](README.md) · [Engineering portfolio](https://dicureck.github.io/) · [GitHub profile](https://github.com/Dicureck)
+
+*Melissa Castro · Independent, synthetic examples only. Not client or production material.*

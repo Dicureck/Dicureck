@@ -1,33 +1,42 @@
-# Reporting Platforms, Software & AI Automation — Roadmap
+# Reporting, Software & AI Automation | Engineering Roadmap
 
-These are **planned independent demonstrations**, not completed production case studies. The public repos linked below are the current reproducible evidence.
+This page distinguishes **published, verifiable examples** from **planned demonstrations**.
 
-## Reporting & BI engineering
+## Currently available
 
-| Domain | Planned demonstrable artifact | Verification |
-|:--|:--|:--|
-| Tableau | Fictional operational incident trends and calculations | Public workbook or documented Tableau Public link, dataset, assumptions |
-| Power BI | Star schema, DAX measures and refresh plan | [Logistics blueprint](https://github.com/Dicureck/logistics-route-intelligence/blob/main/docs/power-bi-blueprint.md) · [Finance blueprint](https://github.com/Dicureck/financial-intelligence-lab/blob/main/docs/power-bi-blueprint.md) |
-| Crystal Reports | Fictional SQL-backed operational summary | Original template/report screenshots and source SQL without proprietary data |
-| Report Builder / SSRS | Paginated financial & operational reports | Synthetic RDL, parameters, independent test data |
+| Public artifact | Evidence | Scope |
+|---|---|---|
+| [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab) | Source, tests, benchmark harness | Actual SQL Server benchmark measurements remain a separate validation step |
+| [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) | Scanner, planner, offline checks, tests | No live cross-engine parity claim |
+| [Logistics lab](https://github.com/Dicureck/logistics-route-intelligence) | Python, synthetic dataset, offline dashboard | No client KPIs |
+| [Financial lab](https://github.com/Dicureck/financial-intelligence-lab) | Synthetic P&L, tests and dashboard | Not accounting advice |
+| [Incident lab](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales) | Synthetic SLA/backlog dashboard | Not a production incident monitoring service |
+| [Data Quality Toolkit](https://github.com/Dicureck/data-quality-toolkit) | CLI and deterministic fixtures | Specific offline data contracts |
 
-Software vendors' branding and proprietary binary project formats are not redistributed unless independently licensed and created with authorized tooling.
+## Reference engineering guides
 
-## Software engineering
+- [Power BI, Tableau, SSRS / Report Builder and Crystal Reports](reporting-platforms.md)
+- [Python & pandas](python-pandas.md)
+- [C# / .NET reporting architecture](csharp-dotnet.md)
+- [Responsible AI-assisted development and mail automation](ai-automation.md)
+- [Analytics Engineering](analytics-engineering.md)
 
-**C# / .NET:** planned standalone CSV validation service with typed models, exceptions, CLI and tests. **JavaScript:** current evidence is the [Secret Friend browser app](https://github.com/Dicureck/challenge-amigo-secreto-esp_main). **Python + pandas:** reproducible labs for [Logistics](https://github.com/Dicureck/logistics-route-intelligence), [Finance](https://github.com/Dicureck/financial-intelligence-lab), and [Data Quality](https://github.com/Dicureck/data-quality-toolkit).
+## Proposed public demonstrations
 
-## Responsible AI-assisted workflows
+**Phase 1: Native BI assets** — synthetic Power BI model, an authorized Tableau Public workbook where feasible, and example paginated reports. Validate exported numbers against source.
 
-- **AI-assisted web development:** original frontend code; use ChatGPT/Claude for drafting, then review and test every generated change. Do not imply an AI integration exists where there is only prompting.
-- **Reusable prompt templates:** requirements discovery, SQL review, accessibility, test design, and documentation, with clear human verification steps. Do not publish private conversation transcripts.
-- **Internal email/report automation:** mocked report scheduling, synthetic outbound messages, approval gates, dry-run mode and secretless local testing. Never send operational information to actual recipients by default.
-- **Governance:** no customer prompts, database credentials, confidential documents, tokens, or real personal records. Track test coverage and known limitations.
+**Phase 2: .NET / C# CLI** — safe parsing, typed records, JSON outputs and unit tests on dummy data.
 
-## Current publication status
+**Phase 3: AI & business automation** — synthetic report generation, mock email delivery, explicit approval gate and separate provider integrations only if safe and authorized.
 
-*Shipped*: the five original labs and apps linked from the [portfolio](https://github.com/Dicureck).
+These items are **planned**, not completed repositories. The existence of knowledge-base notes does not imply a shipped service or integration.
 
-*Planned*: Tableau/Crystal/Report Builder examples, .NET/C# project, AI workflow samples, email automation, and operational incident dashboard implementation.
+## Publication rules
 
-Published experience is not the same as verified mastery of every listed tool. Any future demo will contain evidence before it is labeled complete.
+Original source and data only. Never publish proprietary report templates, customer prompts, real recipients, database credentials or production measurements without proper rights and approval.
+
+---
+
+[← Knowledge Base index](README.md) · [Engineering portfolio](https://dicureck.github.io/) · [GitHub profile](https://github.com/Dicureck)
+
+*Melissa Castro · Independent, synthetic examples only. Not client or production material.*

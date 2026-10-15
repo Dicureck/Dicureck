@@ -104,10 +104,11 @@ These summaries describe professional experience without revealing client detail
 Practical engineering notes, checklists, and decisions—with links to working code. This knowledge base is version-controlled alongside the portfolio.
 
 <table>
-  <tr><td>⚡ <a href="./knowledge-base/sql-performance.md"><b>Performance Engineering</b></a></td><td>🔁 <a href="./knowledge-base/database-migration.md"><b>Database Migration</b></a></td></tr>
-  <tr><td>✅ <a href="./knowledge-base/data-quality.md"><b>Data Quality & Testing</b></a></td><td>📊 <a href="./knowledge-base/analytics-engineering.md"><b>Analytics Engineering</b></a></td></tr>
+  <tr><td>⚡ <a href="./knowledge-base/sql-performance.md"><b>SQL Performance</b></a></td><td>🔁 <a href="./knowledge-base/database-migration.md"><b>Database Migration</b></a></td></tr>
+  <tr><td>✅ <a href="./knowledge-base/data-quality.md"><b>Data Quality</b></a></td><td>🐍 <a href="./knowledge-base/python-pandas.md"><b>Python & pandas</b></a></td></tr>
+  <tr><td>📊 <a href="./knowledge-base/analytics-engineering.md"><b>Analytics Engineering</b></a></td><td>📈 <a href="./knowledge-base/reporting-platforms.md"><b>BI & Reporting Platforms</b></a></td></tr>
+  <tr><td>💻 <a href="./knowledge-base/csharp-dotnet.md"><b>C# / .NET</b></a></td><td>🤖 <a href="./knowledge-base/ai-automation.md"><b>AI & Workflow Automation</b></a></td></tr>
   <tr><td>🔒 <a href="./knowledge-base/portfolio-standards.md"><b>Publication Standards</b></a></td><td>🗺️ <a href="./knowledge-base/portfolio-roadmap.md"><b>Portfolio Roadmap</b></a></td></tr>
-  <tr><td>🛠️ <a href="./knowledge-base/reporting-and-automation.md"><b>Reporting Platforms & AI Automation</b></a></td><td>📍 <a href="https://github.com/Dicureck/logistics-route-intelligence"><b>Operations Intelligence</b></a></td></tr>
 </table>
 
 <p align="center"><a href="./knowledge-base/README.md"><img src="https://img.shields.io/badge/OPEN-ENGINEERING_KNOWLEDGE_BASE-172447?style=for-the-badge&logo=readthedocs&logoColor=53D6FF" alt="Open engineering knowledge base"/></a></p>
