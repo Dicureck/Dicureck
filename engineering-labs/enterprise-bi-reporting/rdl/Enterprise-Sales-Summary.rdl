@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="SyntheticSQLServer">
+      <ConnectionProperties><DataProvider>SQL</DataProvider><ConnectString>Data Source=localhost;Initial Catalog=EnterpriseBILab</ConnectString><IntegratedSecurity>true</IntegratedSecurity></ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <DataSets><DataSet Name="SalesByMonthRegion">
+    <Query>
+      <DataSourceName>SyntheticSQLServer</DataSourceName>
+      <QueryParameters>
+        <QueryParameter Name="@StartDate"><Value>=Parameters!StartDate.Value</Value></QueryParameter>
+        <QueryParameter Name="@EndDate"><Value>=Parameters!EndDate.Value</Value></QueryParameter>
+      </QueryParameters>
+      <CommandType>Text</CommandType>
+      <CommandText>SELECT
+  CONVERT(char(7), sale_date, 120) AS [Month],
+  region AS [Region],
+  COUNT(*) AS [Orders],
+  CAST(SUM(revenue_su) AS decimal(19,2)) AS [RevenueSU],
+  CAST(SUM(revenue_su - cost_su) AS decimal(19,2)) AS [MarginSU],
+  CAST(SUM(revenue_su - budget_su) AS decimal(19,2)) AS [BudgetVarianceSU]
+FROM dbo.FactSyntheticSales
+WHERE sale_date &gt;= @StartDate AND sale_date &lt; @EndDate
+GROUP BY CONVERT(char(7), sale_date, 120), region
+ORDER BY [Month], [Region];</CommandText>
+    </Query>
+    <Fields><Field Name="Month"><DataField>Month</DataField></Field><Field Name="Region"><DataField>Region</DataField></Field><Field Name="Orders"><DataField>Orders</DataField></Field><Field Name="RevenueSU"><DataField>RevenueSU</DataField></Field><Field Name="MarginSU"><DataField>MarginSU</DataField></Field><Field Name="BudgetVarianceSU"><DataField>BudgetVarianceSU</DataField></Field></Fields>
+  </DataSet></DataSets>
+  <ReportParameters>
+    <ReportParameter Name="StartDate"><DataType>DateTime</DataType><Prompt>Start date (inclusive)</Prompt><DefaultValue><Values><Value>2026-01-01</Value></Values></DefaultValue></ReportParameter>
+    <ReportParameter Name="EndDate"><DataType>DateTime</DataType><Prompt>End date (exclusive)</Prompt><DefaultValue><Values><Value>2026-05-01</Value></Values></DefaultValue></ReportParameter>
+  </ReportParameters>
+  <ReportSections><ReportSection>
+    <Body>
+      <ReportItems>
+        <Textbox Name="ReportTitle"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Synthetic Sales | Monthly &amp; Regional Performance</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>16pt</FontSize><FontWeight>Bold</FontWeight><Color>#16324F</Color></Style></TextRun></TextRuns></Paragraph></Paragraphs><Top>0in</Top><Left>0in</Left><Height>0.48in</Height><Width>6.70in</Width><Style /></Textbox>
+        <Textbox Name="ReportNote"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Original fictional dataset only · All figures in synthetic units (SU) · Dates are inclusive/exclusive</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>8pt</FontSize><Color>#566C82</Color></Style></TextRun></TextRuns></Paragraph></Paragraphs><Top>0.53in</Top><Left>0in</Left><Height>0.32in</Height><Width>6.70in</Width><Style /></Textbox>
+        <Tablix Name="SalesTable">
+          <TablixBody>
+            <TablixColumns><TablixColumn><Width>0.88in</Width></TablixColumn><TablixColumn><Width>1.0in</Width></TablixColumn><TablixColumn><Width>0.72in</Width></TablixColumn><TablixColumn><Width>1.3in</Width></TablixColumn><TablixColumn><Width>1.3in</Width></TablixColumn><TablixColumn><Width>1.5in</Width></TablixColumn></TablixColumns>
+            <TablixRows>
+              <TablixRow><Height>0.40in</Height><TablixCells><TablixCell><CellContents><Textbox Name="Header0"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Month</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Bold</FontWeight><Color>White</Color></Style></TextRun></TextRuns><Style><TextAlign>Left</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>#172F4B</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Header1"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Region</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Bold</FontWeight><Color>White</Color></Style></TextRun></TextRuns><Style><TextAlign>Left</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>#172F4B</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Header2"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Orders</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Bold</FontWeight><Color>White</Color></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>#172F4B</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Header3"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Revenue (SU)</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Bold</FontWeight><Color>White</Color></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>#172F4B</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Header4"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Margin (SU)</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Bold</FontWeight><Color>White</Color></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>#172F4B</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Header5"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>Budget variance (SU)</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Bold</FontWeight><Color>White</Color></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>#172F4B</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell></TablixCells></TablixRow>
+              <TablixRow><Height>0.36in</Height><TablixCells><TablixCell><CellContents><Textbox Name="Value0"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!Month.Value</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Normal</FontWeight><Color>#243447</Color></Style></TextRun></TextRuns><Style><TextAlign>Left</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>White</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Value1"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!Region.Value</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Normal</FontWeight><Color>#243447</Color></Style></TextRun></TextRuns><Style><TextAlign>Left</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>White</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Value2"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!Orders.Value</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Normal</FontWeight><Color>#243447</Color></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>White</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Value3"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Format(Fields!RevenueSU.Value, "N2")</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Normal</FontWeight><Color>#243447</Color></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>White</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Value4"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Format(Fields!MarginSU.Value, "N2")</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Normal</FontWeight><Color>#243447</Color></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>White</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell><TablixCell><CellContents><Textbox Name="Value5"><CanGrow>true</CanGrow><KeepTogether>true</KeepTogether><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Format(Fields!BudgetVarianceSU.Value, "N2")</Value><Style><FontFamily>Segoe UI</FontFamily><FontSize>9pt</FontSize><FontWeight>Normal</FontWeight><Color>#243447</Color></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#DCE5F0</Color></Border><BackgroundColor>White</BackgroundColor><PaddingLeft>6pt</PaddingLeft><PaddingRight>6pt</PaddingRight><PaddingTop>5pt</PaddingTop><PaddingBottom>5pt</PaddingBottom></Style></Textbox></CellContents></TablixCell></TablixCells></TablixRow>
+            </TablixRows>
+          </TablixBody>
+          <TablixColumnHierarchy><TablixMembers><TablixMember /><TablixMember /><TablixMember /><TablixMember /><TablixMember /><TablixMember /></TablixMembers></TablixColumnHierarchy>
+          <TablixRowHierarchy>
+            <TablixMembers>
+              <TablixMember><KeepWithGroup>After</KeepWithGroup><RepeatOnNewPage>true</RepeatOnNewPage></TablixMember>
+              <TablixMember><Group Name="SyntheticRows" /></TablixMember>
+            </TablixMembers>
+          </TablixRowHierarchy>
+          <DataSetName>SalesByMonthRegion</DataSetName>
+          <Top>1.02in</Top><Left>0in</Left><Height>0.76in</Height><Width>6.70in</Width>
+          <Style />
+        </Tablix>
+      </ReportItems>
+      <Height>2.15in</Height>
+      <Style />
+    </Body>
+    <Width>6.75in</Width>
+    <Page><PageHeight>11in</PageHeight><PageWidth>8.5in</PageWidth><LeftMargin>0.75in</LeftMargin><RightMargin>0.75in</RightMargin><TopMargin>0.70in</TopMargin><BottomMargin>0.70in</BottomMargin><Style /></Page>
+  </ReportSection></ReportSections>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+</Report>
