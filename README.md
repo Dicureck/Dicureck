@@ -69,11 +69,20 @@ These are **anonymized summaries of professional work**. Client source code, pro
 
 ### `04 / PUBLIC CODE`
 
+**Featured engineering labs** — independent, synthetic demonstrations built to document reproducible techniques without exposing proprietary systems.
+
+| Project | Engineering focus | Stack |
+|:--|:--|:--|
+| **[SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab)** | Query optimization patterns, repeatable benchmarks, and result-set integrity verification. SQL Server runtime benchmarks are pending. | `SQL Server` · `T-SQL` · `Python` |
+| **[Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit)** | Assessment-first T-SQL → Oracle migration review, dependency planning, and synthetic contract / CSV reconciliation tests. Cross-engine validation is pending. | `Oracle` · `PL/SQL` · `Python` |
+
+**Additional work**
+
 **[Secret Friend — JavaScript Web App](https://github.com/Dicureck/challenge-amigo-secreto-esp_main)**  
 `JavaScript` · `HTML` · `CSS`  
-A browser-based random-draw app with participant input checks and client-side logic. An early web-development project demonstrating practical implementation and validation.
+A browser-based random-draw app with participant input checks and client-side logic.
 
-> **Portfolio note:** Most enterprise work is proprietary. Public repositories reflect only a portion of my professional experience; new sanitized demos and case studies will be added as they are ready.
+> **Portfolio note:** Enterprise work is largely proprietary. These public labs are original educational demonstrations, not customer code or production deployment packages.
 
 ### `05 / GITHUB TELEMETRY`
 
