@@ -83,6 +83,36 @@ class ReportTests(unittest.TestCase):
                 self.assertIn("synthetic units", payload["input"])
                 self.assertNotIn("test-placeholder", payload["input"])
 
+    def test_mocked_anthropic_response_uses_only_fictional_aggregates(self):
+        summary = lab.summarize(lab.synthetic_records())
+        with patch.dict(os.environ, {"ANTHROPIC_API_KEY": "test-anthropic-token",
+                                     "ANTHROPIC_MODEL": "mocked-model"}):
+            with patch("urllib.request.urlopen") as opener:
+                opener.return_value.__enter__.return_value.read.return_value = (
+                    json.dumps({"content": [{"type": "text",
+                                            "text": "Synthetic report reviewed"}]}).encode("utf-8")
+                )
+                narrative = lab.ai_review(summary, "anthropic", True, True)
+                self.assertEqual(narrative, "Synthetic report reviewed")
+                opener.assert_called_once()
+                request = opener.call_args.args[0]
+                payload = json.loads(request.data)
+                prompt = payload["messages"][0]["content"]
+                self.assertIn("synthetic units", prompt)
+                self.assertNotIn("test-anthropic-token", prompt)
+                self.assertEqual(request.get_header("Anthropic-version"), "2023-06-01")
+
+    def test_empty_ai_narrative_fails_closed(self):
+        report = lab.summarize(lab.synthetic_records())
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "placeholder",
+                                     "OPENAI_MODEL": "mocked-model"}):
+            with patch("urllib.request.urlopen") as opener:
+                opener.return_value.__enter__.return_value.read.return_value = (
+                    json.dumps({"output": []}).encode("utf-8")
+                )
+                with self.assertRaises(ValueError):
+                    lab.ai_review(report, "openai", True, True)
+
     def test_html_and_preview(self):
         summary = lab.summarize(lab.synthetic_records())
         self.assertIn("<table>", lab.render_report(summary))
