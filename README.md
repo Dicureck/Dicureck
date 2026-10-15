@@ -65,6 +65,10 @@ I build solutions at the intersection of **data analytics, database engineering,
   <img src="https://img.shields.io/badge/Jupyter-123346?style=flat-square&logo=jupyter&logoColor=53D6FF" alt="Jupyter" />
 </p>
 
+**Reporting engineering & responsible automation (next demonstrations)**
+
+[Tableau · Crystal Reports · Report Builder · C# · ChatGPT / Claude workflows · automated reporting](./knowledge-base/reporting-and-automation.md)
+
 <sub>C# and Java represent additional familiarity, not currently published application case studies. Technology badges represent tools and practices; repository language statistics below only describe public code.</sub>
 
 ### `03 / FEATURED ENGINEERING LABS`
@@ -75,9 +79,12 @@ I build solutions at the intersection of **data analytics, database engineering,
 |:--|:--|:--|
 | **[SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab)** | Query optimization, reproducible T-SQL scenarios, result-set integrity checks, benchmark methodology | [![SQL Lab CI](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml) |
 | **[Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit)** | T-SQL → PL/SQL review, dependency planning, data-contract checks, CSV reconciliation | [![Oracle Toolkit CI](https://github.com/Dicureck/oracle-migration-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/oracle-migration-toolkit/actions/workflows/ci.yml) |
+| **[Logistics & Route Intelligence](https://github.com/Dicureck/logistics-route-intelligence)** | Synthetic delivery operations, SLA contracts, geofences and reproducible offline dashboard | [![Logistics CI](https://github.com/Dicureck/logistics-route-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/logistics-route-intelligence/actions/workflows/ci.yml) |
+| **[Financial Intelligence Lab](https://github.com/Dicureck/financial-intelligence-lab)** | Auditable fictional P&L, operating margins, budget variances and BI modeling | [![Financial CI](https://github.com/Dicureck/financial-intelligence-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/financial-intelligence-lab/actions/workflows/ci.yml) |
+| **[Data Quality Toolkit](https://github.com/Dicureck/data-quality-toolkit)** | Data contracts, validation gates, duplicate-aware reconciliation and CLI evidence | [![Quality CI](https://github.com/Dicureck/data-quality-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/data-quality-toolkit/actions/workflows/ci.yml) |
 | **[Secret Friend](https://github.com/Dicureck/challenge-amigo-secreto-esp_main)** | Client-side JavaScript, input validation, randomized selection | [Source code](https://github.com/Dicureck/challenge-amigo-secreto-esp_main/blob/main/app.js) |
 
-**In preparation:** operational incident analytics, logistics intelligence, financial analytics, and a Python data-quality toolkit. See the [actual roadmap and project status](./knowledge-base/portfolio-roadmap.md) — planned work is not listed as completed work.
+**Next demonstrations:** operational incident analytics, advanced BI reporting (Tableau / Crystal Reports / Report Builder), responsible AI-assisted web development, and email/process automation. [Track their actual status](./knowledge-base/portfolio-roadmap.md).
 
 ### `04 / PROFESSIONAL FOCUS`
 
@@ -98,6 +105,7 @@ An evolving, version-controlled **technical Wiki-style playbook** with decision 
   <tr><td>⚡ <a href="./knowledge-base/sql-performance.md"><b>Performance Engineering</b></a></td><td>🔁 <a href="./knowledge-base/database-migration.md"><b>Database Migration</b></a></td></tr>
   <tr><td>✅ <a href="./knowledge-base/data-quality.md"><b>Data Quality & Testing</b></a></td><td>📊 <a href="./knowledge-base/analytics-engineering.md"><b>Analytics Engineering</b></a></td></tr>
   <tr><td>🔒 <a href="./knowledge-base/portfolio-standards.md"><b>Publication Standards</b></a></td><td>🗺️ <a href="./knowledge-base/portfolio-roadmap.md"><b>Portfolio Roadmap</b></a></td></tr>
+  <tr><td>🛠️ <a href="./knowledge-base/reporting-and-automation.md"><b>Reporting Platforms & AI Automation</b></a></td><td>📍 <a href="https://github.com/Dicureck/logistics-route-intelligence"><b>Operations Intelligence</b></a></td></tr>
 </table>
 
 <p align="center"><a href="./knowledge-base/README.md"><img src="https://img.shields.io/badge/OPEN-ENGINEERING_KNOWLEDGE_BASE-172447?style=for-the-badge&logo=readthedocs&logoColor=53D6FF" alt="Open engineering knowledge base"/></a></p>
