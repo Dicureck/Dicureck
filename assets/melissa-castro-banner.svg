@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="470" viewBox="0 0 1600 470" role="img" aria-labelledby="title desc">
+<title id="title">Melissa Castro — Data Analytics &amp; Business Intelligence</title>
+<desc id="desc">Futuristic dark banner with cyan and violet data network, featuring Melissa Castro's professional data engineering focus.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080C1C"/><stop offset="55%" stop-color="#0D1731"/><stop offset="100%" stop-color="#100E28"/></linearGradient>
+ <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#44E0FF"/><stop offset="52%" stop-color="#5BA7FF"/><stop offset="100%" stop-color="#A28CFF"/></linearGradient>
+ <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#49CFFF" stop-opacity="0"/><stop offset="0.52" stop-color="#49CFFF" stop-opacity=".38"/><stop offset="1" stop-color="#A88BFF" stop-opacity="0"/></linearGradient>
+ <radialGradient id="glow"><stop offset="0" stop-color="#4D76FC" stop-opacity=".23"/><stop offset="1" stop-color="#4D76FC" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse"><path d="M46 0H0V46" fill="none" stroke="#6F98C9" stroke-opacity=".085" stroke-width="1"/></pattern>
+ <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+ <filter id="tinyglow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <clipPath id="clip"><rect width="1600" height="470" rx="20"/></clipPath>
+</defs>
+<g clip-path="url(#clip)">
+ <rect width="1600" height="470" fill="url(#bg)"/>
+ <rect width="1600" height="470" fill="url(#grid)"/>
+ <ellipse cx="1285" cy="235" rx="390" ry="390" fill="url(#glow)"/>
+ <path d="M0 85H1600M0 385H1600" stroke="url(#fade)" stroke-width="1"/>
+ <g fill="none" stroke="#4873AB" stroke-opacity=".25" stroke-width="1">
+  <path d="M1000 40H1430L1530 140V320L1410 430H1000"/>
+  <path d="M1080 0V470M1434 0V470" stroke-dasharray="4 10"/>
+ </g>
+ <g transform="translate(1206 235)" fill="none">
+  <circle r="176" stroke="#4CB3EA" stroke-opacity=".32" stroke-width="1.3"/>
+  <circle r="136" stroke="#4CB3EA" stroke-opacity=".22" stroke-dasharray="4 12" stroke-width="1.8"/>
+  <circle r="94" stroke="#8B80FF" stroke-opacity=".49" stroke-width="1.7"/>
+  <circle r="57" stroke="#48CFFF" stroke-opacity=".26" stroke-width="1.3"/>
+  <path d="M-210 0H210M0 -210V210" stroke="#83B6E5" stroke-opacity=".17"/>
+  <path d="M-174 28L-122 -40L-68 -10L-15 -75L50 -40L100 -120L173 -65" stroke="#53D5FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M-174 28L-122 -40L-68 -10L-15 -75L50 -40L100 -120L173 -65" stroke="#45D3FF" stroke-width="7" stroke-opacity=".35" filter="url(#blur)"/>
+  <path d="M-170 76L-100 90L-30 30L45 80L105 36L173 55" stroke="#978AFF" stroke-width="2" stroke-opacity=".7"/>
+  <g fill="#78E1FF" stroke="#071429" stroke-width="5">
+   <circle cx="-174" cy="28" r="8"/><circle cx="-122" cy="-40" r="7"/><circle cx="-68" cy="-10" r="7"/><circle cx="-15" cy="-75" r="8"/><circle cx="50" cy="-40" r="7"/><circle cx="100" cy="-120" r="9"/><circle cx="173" cy="-65" r="7"/>
+  </g>
+  <g fill="#A794FF" stroke="#081022" stroke-width="4"><circle cx="-170" cy="76" r="5"/><circle cx="-30" cy="30" r="5"/><circle cx="105" cy="36" r="5"/></g>
+ </g>
+ <rect x="1058" y="72" rx="11" width="175" height="48" fill="#0C1D38" fill-opacity=".88" stroke="#54BDEB" stroke-opacity=".45"/>
+ <circle cx="1080" cy="96" r="5" fill="#46E3DB" filter="url(#tinyglow)"/>
+ <text x="1093" y="101" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" fill="#D4EAFF">DATA SYSTEMS</text>
+ <rect x="1320" y="334" rx="11" width="208" height="51" fill="#161A3A" fill-opacity=".94" stroke="#9C8AFF" stroke-opacity=".5"/>
+ <text x="1340" y="366" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" fill="#CFC9FF">QUERY · ANALYZE</text>
+ <rect x="975" y="340" rx="7" width="96" height="34" fill="#082A3D" fill-opacity=".9" stroke="#3BB6D3" stroke-opacity=".35"/>
+ <text x="988" y="362" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" fill="#93DBF0">BI / SQL</text>
+ <g fill="#5EC6F5"><rect x="62" y="48" width="6" height="6" rx="1"/><rect x="74" y="48" width="6" height="6" rx="1" opacity=".6"/><rect x="86" y="48" width="6" height="6" rx="1" opacity=".3"/></g>
+ <text x="109" y="57" fill="#9AAECF" font-size="17" letter-spacing="3" font-family="DejaVu Sans, Arial, sans-serif">ENGINEERING INTELLIGENCE</text>
+ <rect x="62" y="115" width="8" height="193" fill="url(#accent)" rx="4"/>
+ <text x="99" y="207" fill="#FFFFFF" font-size="76" font-weight="700" letter-spacing="2" font-family="DejaVu Sans, Arial, sans-serif">MELISSA</text>
+ <text x="99" y="298" fill="url(#accent)" font-size="84" font-weight="700" letter-spacing="6" font-family="DejaVu Sans, Arial, sans-serif">CASTRO</text>
+ <text x="101" y="344" fill="#E1E9FB" font-size="24" letter-spacing="3" font-family="DejaVu Sans, Arial, sans-serif">DATA ANALYTICS / BUSINESS INTELLIGENCE</text>
+ <text x="101" y="388" fill="#AFC0E0" font-size="21" letter-spacing="2" font-family="DejaVu Sans, Arial, sans-serif">SQL ENGINEERING   ·   PYTHON   ·   AUTOMATION</text>
+ <path d="M62 425H915" stroke="url(#accent)" stroke-width="2" stroke-opacity=".5"/>
+ <text x="65" y="452" fill="#7A98BD" font-size="13" letter-spacing="4" font-family="DejaVu Sans, Arial, sans-serif">GUATEMALA  /  TURNING COMPLEXITY INTO CLARITY</text>
+ <text x="1450" y="447" fill="#7A91B3" font-size="13" letter-spacing="3" font-family="DejaVu Sans, Arial, sans-serif">MC // 01</text>
+</g>
+</svg>
