@@ -1,134 +1,143 @@
 <!--
-  PROFESSIONAL PROFILE // MELISSA CASTRO
-  Theme: cyber-noir / electric cyan / violet
-  GitHub username: Dicureck
-  Project details are limited to information safe for public sharing.
+  MELISSA CASTRO | ENGINEERING PORTFOLIO
+  Theme: cyber-noir / electric cyan + violet
+  Statistics describe public GitHub repositories, not professional seniority.
+  Public labs use original, synthetic data only.
 -->
 
 <p align="center">
-  <img src="./assets/melissa-castro-banner.svg" alt="Melissa Castro | Data Analytics, Business Intelligence, SQL Engineering and Automation" width="100%" />
+  <img src="./assets/melissa-castro-banner.svg" alt="Melissa Castro — Data Analytics, Business Intelligence, SQL Engineering and Automation" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/Dicureck"><img src="https://img.shields.io/badge/GitHub-Dicureck-0C1224?style=flat-square&logo=github&logoColor=E6F4FF&labelColor=111B32" alt="GitHub Dicureck" /></a>
-  <a href="mailto:info@intebi.online"><img src="https://img.shields.io/badge/Business%20Contact-info%40intebi.online-0C1224?style=flat-square&logo=gmail&logoColor=53D6FF&labelColor=111B32" alt="Business email" /></a>
-  <img src="https://img.shields.io/badge/Based%20in-Guatemala-0C1224?style=flat-square&labelColor=111B32&color=0A3150" alt="Based in Guatemala" />
+  <a href="https://github.com/Dicureck?tab=repositories"><img alt="Explore public code" src="https://img.shields.io/badge/EXPLORE-PUBLIC_CODE-0D2036?style=for-the-badge&logo=github&logoColor=55DDFF&labelColor=141A32"/></a>
+  <a href="./knowledge-base/README.md"><img alt="Engineering knowledge base" src="https://img.shields.io/badge/ENGINEERING-KNOWLEDGE_BASE-211A3A?style=for-the-badge&logo=bookstack&logoColor=B39BFF&labelColor=141A32"/></a>
+  <a href="./knowledge-base/portfolio-roadmap.md"><img alt="Portfolio roadmap" src="https://img.shields.io/badge/PORTFOLIO-ROADMAP-0F3040?style=for-the-badge&logo=githubprojects&logoColor=5DE3ED&labelColor=141A32"/></a>
+  <a href="mailto:info@intebi.online"><img alt="Business inquiries" src="https://img.shields.io/badge/CONTACT-LET'S_TALK-25213A?style=for-the-badge&logo=gmail&logoColor=E3D6FF&labelColor=141A32"/></a>
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3400&pause=1200&color=53D6FF&center=true&vCenter=true&width=860&height=40&lines=From+raw+data+to+strategic+decisions;Engineering+reliable+data+workflows;Optimizing+SQL+and+business+processes;Building+clarity+from+complexity" alt="Rotating statement about data analytics, SQL optimization, and business intelligence" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3200&pause=900&color=53D6FF&center=true&vCenter=true&width=850&height=38&lines=Engineering+clarity+from+complexity;Data+analytics+%2B+database+engineering;Building+reliable+SQL+and+Python+workflows;Making+business+data+actionable" alt="Data analytics and engineering specialties" />
 </p>
 
-<p align="center">
-  <b>Data Analyst &nbsp;·&nbsp; Business Intelligence &nbsp;·&nbsp; Database Engineering</b>
-</p>
+<p align="center"><b>Data Analytics &nbsp;·&nbsp; Business Intelligence &nbsp;·&nbsp; SQL Engineering &nbsp;·&nbsp; Automation</b></p>
 
 ---
 
-### `01 / THE ENGINEER BEHIND THE DATA`
+### `01 / ENGINEERING PROFILE`
 
-I work at the intersection of **data analytics, business intelligence, database engineering, and process optimization**. I turn complex business requirements into structured solutions — from SQL development and database modernization to operational dashboards and actionable reporting.
+I build solutions at the intersection of **data analytics, database engineering, business intelligence, and process improvement**. My work spans SQL analysis and optimization, SQL Server → Oracle modernization, operational reporting, and decision-focused dashboards.
 
-My approach blends **technical rigor, business context, and measurable problem-solving**: understand the question, validate the data, engineer the solution, and make the result useful to the people making decisions.
+**My engineering principles:** verify the underlying data, define the business contract, document trade-offs, test repeatably, and communicate results with appropriate limitations.
 
-> **My north star:** Build systems that make information more reliable, decisions more informed, and processes more efficient.
+> **Engineering clarity from complexity.** Useful systems are reliable, understandable, and built for real decisions.
 
-### `02 / TECHNICAL TOOLKIT`
+### `02 / PROGRAMMING & QUERY LANGUAGES`
 
-**Data, programming & databases**
-
-<p>
-  <img src="https://img.shields.io/badge/Python-162340?style=for-the-badge&logo=python&logoColor=53D6FF" alt="Python" />
-  <img src="https://img.shields.io/badge/pandas-162340?style=for-the-badge&logo=pandas&logoColor=53D6FF" alt="pandas" />
-  <img src="https://img.shields.io/badge/SQL-162340?style=for-the-badge&logo=databricks&logoColor=53D6FF" alt="SQL" />
-  <img src="https://img.shields.io/badge/SQL_Server-162340?style=for-the-badge&logo=microsoftsqlserver&logoColor=53D6FF" alt="Microsoft SQL Server" />
-  <img src="https://img.shields.io/badge/Oracle-162340?style=for-the-badge&logo=oracle&logoColor=53D6FF" alt="Oracle" />
-  <img src="https://img.shields.io/badge/PL%2FSQL-162340?style=for-the-badge&logoColor=53D6FF" alt="PL/SQL" />
-</p>
-
-**Analytics, visualization & delivery**
+**Programming, scripting & automation** · clickable badges lead to code when available.
 
 <p>
-  <img src="https://img.shields.io/badge/Power_BI-25213A?style=for-the-badge&logo=powerbi&logoColor=AB97FF" alt="Power BI" />
-  <img src="https://img.shields.io/badge/Excel-25213A?style=for-the-badge&logo=microsoftexcel&logoColor=AB97FF" alt="Microsoft Excel" />
-  <img src="https://img.shields.io/badge/Tableau-25213A?style=for-the-badge&logo=tableau&logoColor=AB97FF" alt="Tableau" />
-  <img src="https://img.shields.io/badge/Git-25213A?style=for-the-badge&logo=git&logoColor=AB97FF" alt="Git" />
-  <img src="https://img.shields.io/badge/Jupyter-25213A?style=for-the-badge&logo=jupyter&logoColor=AB97FF" alt="Jupyter" />
-  <img src="https://img.shields.io/badge/JavaScript-25213A?style=for-the-badge&logo=javascript&logoColor=AB97FF" alt="JavaScript" />
+  <a href="https://github.com/Dicureck/sql-performance-lab/tree/main/src/perf_lab"><img src="https://img.shields.io/badge/Python-142947?style=for-the-badge&logo=python&logoColor=53D6FF" alt="Python examples"/></a>
+  <a href="https://github.com/Dicureck/challenge-amigo-secreto-esp_main/blob/main/app.js"><img src="https://img.shields.io/badge/JavaScript-142947?style=for-the-badge&logo=javascript&logoColor=53D6FF" alt="JavaScript examples"/></a>
+  <img src="https://img.shields.io/badge/C%23-142947?style=for-the-badge&logo=csharp&logoColor=9CCFFF" alt="C sharp familiarity"/>
+  <img src="https://img.shields.io/badge/Java-142947?style=for-the-badge&logo=openjdk&logoColor=9CCFFF" alt="Java familiarity"/>
 </p>
 
-### `03 / SELECTED EXPERIENCE`
+**Database & query languages**
 
-These are **anonymized summaries of professional work**. Client source code, production data, business logic, and confidential documentation are not published here.
+<p>
+  <a href="https://github.com/Dicureck/sql-performance-lab/tree/main/sql"><img src="https://img.shields.io/badge/T--SQL-211C3A?style=for-the-badge&logo=microsoftsqlserver&logoColor=B9A0FF" alt="T-SQL examples"/></a>
+  <a href="https://github.com/Dicureck/oracle-migration-toolkit/tree/main/sql/oracle"><img src="https://img.shields.io/badge/PL%2FSQL-211C3A?style=for-the-badge&logo=oracle&logoColor=B9A0FF" alt="PL/SQL examples"/></a>
+  <a href="https://github.com/Dicureck/sql-performance-lab/tree/main/sql"><img src="https://img.shields.io/badge/SQL-211C3A?style=for-the-badge&logo=postgresql&logoColor=B9A0FF" alt="SQL examples"/></a>
+</p>
 
-| Focus | Engineering contribution | Value delivered |
+**Analytics, databases & tooling**
+
+<p>
+  <img src="https://img.shields.io/badge/SQL_Server-123346?style=flat-square&logo=microsoftsqlserver&logoColor=53D6FF" alt="SQL Server" />
+  <img src="https://img.shields.io/badge/Oracle-123346?style=flat-square&logo=oracle&logoColor=53D6FF" alt="Oracle" />
+  <img src="https://img.shields.io/badge/pandas-123346?style=flat-square&logo=pandas&logoColor=53D6FF" alt="pandas" />
+  <img src="https://img.shields.io/badge/Power_BI-123346?style=flat-square&logo=powerbi&logoColor=53D6FF" alt="Power BI" />
+  <img src="https://img.shields.io/badge/Excel-123346?style=flat-square&logo=microsoftexcel&logoColor=53D6FF" alt="Excel" />
+  <img src="https://img.shields.io/badge/Tableau-123346?style=flat-square&logo=tableau&logoColor=53D6FF" alt="Tableau" />
+  <img src="https://img.shields.io/badge/Qlik-123346?style=flat-square&logo=qlik&logoColor=53D6FF" alt="Qlik" />
+  <img src="https://img.shields.io/badge/Git-123346?style=flat-square&logo=git&logoColor=53D6FF" alt="Git" />
+  <img src="https://img.shields.io/badge/Jupyter-123346?style=flat-square&logo=jupyter&logoColor=53D6FF" alt="Jupyter" />
+</p>
+
+<sub>C# and Java represent additional familiarity, not currently published application case studies. Technology badges represent tools and practices; repository language statistics below only describe public code.</sub>
+
+### `03 / FEATURED ENGINEERING LABS`
+
+**Independent public demonstrations** — built with synthetic data and original examples, separate from proprietary enterprise work.
+
+| Project | Engineering focus | Verification |
 |:--|:--|:--|
-| **Database modernization** | SQL Server → Oracle migration work, object-level translation, dependency checks, PL/SQL validation, and deployment preparation. | More controlled and verifiable database transitions. |
-| **SQL performance engineering** | Stored-procedure analysis, query optimization, execution-time comparisons, and result verification. | Faster, more dependable reporting workflows. |
-| **Business & operational intelligence** | Dashboards, route and productivity analysis, business reporting, and data quality checks. | Greater visibility into operational performance and decisions. |
+| **[SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab)** | Query optimization, reproducible T-SQL scenarios, result-set integrity checks, benchmark methodology | [![SQL Lab CI](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/sql-performance-lab/actions/workflows/ci.yml) |
+| **[Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit)** | T-SQL → PL/SQL review, dependency planning, data-contract checks, CSV reconciliation | [![Oracle Toolkit CI](https://github.com/Dicureck/oracle-migration-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/oracle-migration-toolkit/actions/workflows/ci.yml) |
+| **[Secret Friend](https://github.com/Dicureck/challenge-amigo-secreto-esp_main)** | Client-side JavaScript, input validation, randomized selection | [Source code](https://github.com/Dicureck/challenge-amigo-secreto-esp_main/blob/main/app.js) |
 
-### `04 / PUBLIC CODE`
+**In preparation:** operational incident analytics, logistics intelligence, financial analytics, and a Python data-quality toolkit. See the [actual roadmap and project status](./knowledge-base/portfolio-roadmap.md) — planned work is not listed as completed work.
 
-**Featured engineering labs** — independent, synthetic demonstrations built to document reproducible techniques without exposing proprietary systems.
+### `04 / PROFESSIONAL FOCUS`
 
-| Project | Engineering focus | Stack |
-|:--|:--|:--|
-| **[SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab)** | Query optimization patterns, repeatable benchmarks, and result-set integrity verification. SQL Server runtime benchmarks are pending. | `SQL Server` · `T-SQL` · `Python` |
-| **[Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit)** | Assessment-first T-SQL → Oracle migration review, dependency planning, and synthetic contract / CSV reconciliation tests. Cross-engine validation is pending. | `Oracle` · `PL/SQL` · `Python` |
+| Domain | Engineering contribution |
+|:--|:--|
+| **SQL performance** | Query analysis, stored-procedure optimization, controlled comparisons, and regression checks. |
+| **Database modernization** | Object conversion, dependency assessment, migration validation, and PL/SQL compatibility review. |
+| **Business intelligence** | KPI definitions, dashboarding, productivity analysis, and operational/financial reporting. |
+| **Automation & data quality** | Reproducible checks, consistency analysis, and validation-driven workflows. |
 
-**Additional work**
+Professional experience is summarized at a high level. **No client source, business data, production configuration, or confidential measurements appear in these repositories.**
 
-**[Secret Friend — JavaScript Web App](https://github.com/Dicureck/challenge-amigo-secreto-esp_main)**  
-`JavaScript` · `HTML` · `CSS`  
-A browser-based random-draw app with participant input checks and client-side logic.
+### `05 / ENGINEERING KNOWLEDGE BASE`
 
-> **Portfolio note:** Enterprise work is largely proprietary. These public labs are original educational demonstrations, not customer code or production deployment packages.
+An evolving, version-controlled **technical Wiki-style playbook** with decision frameworks, checklists, and links to working public labs.
 
-### `05 / GITHUB TELEMETRY`
+<table>
+  <tr><td>⚡ <a href="./knowledge-base/sql-performance.md"><b>Performance Engineering</b></a></td><td>🔁 <a href="./knowledge-base/database-migration.md"><b>Database Migration</b></a></td></tr>
+  <tr><td>✅ <a href="./knowledge-base/data-quality.md"><b>Data Quality & Testing</b></a></td><td>📊 <a href="./knowledge-base/analytics-engineering.md"><b>Analytics Engineering</b></a></td></tr>
+  <tr><td>🔒 <a href="./knowledge-base/portfolio-standards.md"><b>Publication Standards</b></a></td><td>🗺️ <a href="./knowledge-base/portfolio-roadmap.md"><b>Portfolio Roadmap</b></a></td></tr>
+</table>
+
+<p align="center"><a href="./knowledge-base/README.md"><img src="https://img.shields.io/badge/OPEN-ENGINEERING_KNOWLEDGE_BASE-172447?style=for-the-badge&logo=readthedocs&logoColor=53D6FF" alt="Open engineering knowledge base"/></a></p>
+
+### `06 / VERIFIED GITHUB TELEMETRY`
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Dicureck&theme=tokyonight" alt="GitHub contribution overview for Dicureck" width="98%" />
+  <img src="./assets/telemetry.svg" alt="Live public repository count, star count, and repository code-language distribution" width="98%" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Dicureck&theme=tokyonight" alt="GitHub statistics for Dicureck" width="48%" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Dicureck&theme=tokyonight" alt="Programming languages used in public repositories" width="48%" />
+  <a href="https://github.com/Dicureck?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-VIEW_LIVE_DATA-10263B?style=flat-square&logo=github&logoColor=53D6FF" alt="View public repositories"/></a>
+  <a href="https://github.com/Dicureck?tab=overview"><img src="https://img.shields.io/badge/CONTRIBUTIONS-OFFICIAL_GITHUB_GRAPH-261D40?style=flat-square&logo=github&logoColor=BEA2FF" alt="View official GitHub contributions"/></a>
+  <a href="https://github.com/Dicureck/Dicureck/actions/workflows/telemetry.yml"><img src="https://github.com/Dicureck/Dicureck/actions/workflows/telemetry.yml/badge.svg" alt="Telemetry refresh workflow status"/></a>
 </p>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Dicureck&bg_color=0D1428&color=85C9F6&line=53D6FF&point=A58AFF&area=true&hide_border=true&title_color=E8F2FF" alt="GitHub activity graph for Dicureck" width="98%" />
-</p>
+<sub>Stats are generated daily from GitHub's public API by [a version-controlled Python script](./scripts/refresh_telemetry.py), not from a third-party chart provider. Repository language percentages use code-byte counts, not professional proficiency or career contribution. The initial placeholder updates after the first successful workflow run.</sub>
 
-<sub>GitHub cards display **publicly visible activity and repository languages**, not total professional experience. Third-party chart services may occasionally be unavailable.</sub>
-
-### `06 / HOW I THINK`
+### `07 / HOW I ENGINEER SOLUTIONS`
 
 ```text
-[ BUSINESS QUESTION ]
-        |
-        v
-[ DATA DISCOVERY & VALIDATION ]
-        |
-        v
-[ SQL / PYTHON / MODELING ]
-        |
-        v
-[ ANALYSIS & QUALITY CHECKS ]
-        |
-        v
-[ DASHBOARDS / INSIGHTS / AUTOMATION ]
-        |
-        v
-[ BETTER DECISIONS ]
+BUSINESS QUESTION
+       │
+       ▼
+DATA DISCOVERY / VALIDATION
+       │
+       ▼
+SQL · PYTHON · DATA MODELING
+       │
+       ▼
+QUALITY & REPRODUCIBILITY CHECKS
+       │
+       ▼
+INSIGHTS · AUTOMATION · DECISIONS
 ```
 
-### `07 / LET'S BUILD SOMETHING USEFUL`
+### `08 / LET'S BUILD SOMETHING USEFUL`
 
-I value data products that are **clear, maintainable, validated, and designed around real business needs**.
+I value engineering that is measurable, understandable, secure, and maintainable.
 
-**Explore:** [Public repositories](https://github.com/Dicureck?tab=repositories) &nbsp;·&nbsp; **Business inquiries:** [info@intebi.online](mailto:info@intebi.online)
+**Explore:** [Projects](https://github.com/Dicureck?tab=repositories) · [Engineering notes](./knowledge-base/README.md) · **Business inquiries:** [info@intebi.online](mailto:info@intebi.online)
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0C142A,50:142445,100:10132A&height=4&section=footer" width="100%" alt="Cyan and violet profile divider" />
-  <sub>Designed for impact. Engineered with intention. · Melissa Castro</sub>
-</p>
+<p align="center"><sub>Designed for impact. Engineered with intention. · Melissa Castro · Guatemala</sub></p>
