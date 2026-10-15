@@ -143,7 +143,7 @@ New independent sample applications and source-backed reporting explanations:
 
 <sub>This panel is updated daily using [a Python script](./scripts/refresh_telemetry.py) and GitHub's public API. Language percentages are based on public repository file sizes; they do not measure skill or professional experience. CI badges indicate automated checks, not production certification.</sub>
 
-**Technical documentation:** [Browse the native Engineering Wiki](https://github.com/Dicureck/Dicureck/wiki) · [Verified Wiki sync](https://github.com/Dicureck/Dicureck/actions/workflows/wiki-sync.yml) · [Canonical Knowledge Base](./knowledge-base/README.md).
+**Technical documentation:** [Native Engineering Wiki](https://github.com/Dicureck/Dicureck/wiki) · [Verified Wiki sync](https://github.com/Dicureck/Dicureck/actions/workflows/wiki-sync.yml) · [Knowledge Base](./knowledge-base/README.md) · [Security Policy](./SECURITY.md).
 
 ### `07 / MY WORKFLOW`
 
