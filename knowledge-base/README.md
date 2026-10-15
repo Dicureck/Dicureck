@@ -6,6 +6,8 @@
 
 This **version-controlled knowledge base** is the canonical home for my public engineering guides. It complements the [interactive portfolio](https://dicureck.github.io/) and the [native GitHub Wiki](https://github.com/Dicureck/Dicureck/wiki), which is maintained separately.
 
+**New:** [Three case studies](../case-studies/README.md) · [Python & AI demo](../engineering-labs/ai-business-automation/README.md) · [C# reporting demo](../engineering-labs/enterprise-reporting-dotnet/README.md) · [Power BI / Tableau calculation examples](bi-examples.md) · [Public roadmap](../ROADMAP.md)
+
 ## Explore the engineering playbook
 
 | Topic | Technical guide | Related evidence |

@@ -113,6 +113,22 @@ Practical engineering notes, checklists, and decisions—with links to working c
 
 <p align="center"><a href="./knowledge-base/README.md"><img src="https://img.shields.io/badge/OPEN-ENGINEERING_KNOWLEDGE_BASE-172447?style=for-the-badge&logo=readthedocs&logoColor=53D6FF" alt="Open engineering knowledge base"/></a></p>
 
+
+### \`05A / RUNNABLE WORKFLOWS & CASE STUDIES\`
+
+New independent sample applications and source-backed reporting explanations:
+
+| Engineering demonstration | Interactive showcase |
+|---|---|
+| [Python · AI & Business Automation](./engineering-labs/ai-business-automation/README.md) — synthetic JSON/HTML reports, unsent mail previews, approval-gated optional model API calls | [Security-aware workflow](./knowledge-base/ai-automation.md) |
+| [C# · .NET Enterprise Reporting](./engineering-labs/enterprise-reporting-dotnet/README.md) — typed CSV parser, decimal reporting, self-tests and CI | [Reporting architecture](./knowledge-base/reporting-platforms.md) |
+| [Logistics Case Study](./case-studies/logistics.md) | [Live dashboard](https://dicureck.github.io/?demo=logistics#lab) |
+| [Finance Case Study](./case-studies/finance.md) | [Live dashboard](https://dicureck.github.io/?demo=finance#lab) |
+| [Incidents Case Study](./case-studies/incidents.md) | [Live dashboard](https://dicureck.github.io/?demo=incidents#lab) |
+| [Original Power BI & Tableau calculations](./knowledge-base/bi-examples.md) | [Public roadmap](./ROADMAP.md) |
+
+**Scope:** Python tests and .NET GitHub Actions are public; AI API calls and native BI tool integrations are not represented as independently tested deployments.
+
 ### `06 / GITHUB ACTIVITY & METRICS`
 
 <p align="center">
