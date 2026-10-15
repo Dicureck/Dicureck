@@ -8,14 +8,19 @@
 - [x] [.NET reporting lab](engineering-labs/enterprise-reporting-dotnet/README.md) with source, CSV input validation and CI
 - [x] [Reporting platform calculation notes](knowledge-base/bi-examples.md)
 
+## Official v0.1.0 source releases
+
+Six independent repositories now have [official tagged releases](knowledge-base/releases.md), with GitHub Actions checks, original fixtures and clearly stated limitations.
+
 ## Next verification gates
 - [ ] Test optional OpenAI / Anthropic APIs in a controlled non-production account; never store provider keys or live responses in the public repo
-- [ ] Run SQL Server benchmark scripts against a dedicated local test database and publish full methodology
+- [x] Run initial real SQL Server Developer CI benchmark with synthetic fixtures and [publish bounded measurements](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md)
+- [ ] Expand SQL Server benchmarks with actual plans, logical reads and repeated independent trials
 - [ ] Run SQL Server → Oracle comparison in authorized isolated instances and validate result multiset equivalence
 - [ ] Publish actual Power BI / Tableau / RDL demonstrations after runtime validation and licensing checks
 - [ ] Add native GitHub Wiki pages for expanded technical sections (separate Git repo / edit workflow)
-- [ ] Publish native GitHub releases with immutable tags and attached release notes
-- [ ] If GitHub Projects is enabled for this account, create a public project board linked to tracked issues
+- [x] Publish [six native GitHub Releases v0.1.0](knowledge-base/releases.md) from CI-verified source
+- [ ] Create a public GitHub Projects board linked to tracked issues; [board setup and statuses](knowledge-base/projects-board-setup.md)
 - [ ] Extract each monorepo engineering lab into a dedicated repository once creation is authorized/supported by tooling
 
 For progress, use [GitHub Issues](https://github.com/Dicureck/Dicureck/issues) if enabled; this checklist remains the source-controlled fallback when a native GitHub Projects board is not accessible.

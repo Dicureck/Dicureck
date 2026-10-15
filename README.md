@@ -170,4 +170,4 @@ I enjoy building data tools that solve practical problems—and making them clea
 <p align="center"><sub>Built with curiosity, care, and attention to detail. · Melissa Castro · Guatemala</sub></p>
 
 
-**Reproducible versioning:** [Lab release drafts and confirmed CI evidence](./knowledge-base/releases.md) · [Public roadmap and genuine browser screenshots](https://dicureck.github.io/roadmap.html). Native Releases and a GitHub Projects board are still pending and are not described as published.
+**Official source releases:** [Six published v0.1.0 versions](./knowledge-base/releases.md) · [Public roadmap and verified browser screenshots](https://dicureck.github.io/roadmap.html). A native GitHub Projects board remains the next step; it is not yet claimed as published.

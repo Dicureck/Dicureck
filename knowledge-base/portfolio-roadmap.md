@@ -59,3 +59,10 @@ These issues are the trackable implementation and verification gates for the nex
 The [responsive public development roadmap](https://dicureck.github.io/roadmap.html) summarizes verified and planned work. Actual Chromium screenshots from the successful [live-site run](https://github.com/Dicureck/dicureck.github.io/actions/runs/38812402350) are available as a GitHub Actions artifact; source data are entirely fictional.
 
 [Release readiness by repository](releases.md) lists source version, CI evidence and outstanding native GitHub release steps.
+
+
+## Six official GitHub Releases
+
+All six standalone source laboratories now provide [official v0.1.0 GitHub Releases](releases.md). Each release has passed its repository's CI for the exact tagged commit; see its page for evidence and limitations. AI/automation and .NET reporting remain subfolders in the profile repository.
+
+The native GitHub Projects board is the next planned presentation step. [Board configuration guide](projects-board-setup.md).
