@@ -8,6 +8,13 @@
 | [Financial Intelligence](finance.md) | [Explore finance](https://dicureck.github.io/?demo=finance#lab) | [Financial lab](https://github.com/Dicureck/financial-intelligence-lab) |
 | [Incident Intelligence](incidents.md) | [Explore incidents](https://dicureck.github.io/?demo=incidents#lab) | [Incidents lab](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales) |
 
+## Software and automation studies
+
+| Study | Published implementation | Verification boundary |
+|---|---|---|
+| [AI & Business Automation](ai-automation.md) | [Python source](../engineering-labs/ai-business-automation/README.md) | Offline tests; no real emails |
+| [Enterprise Reporting & C#](enterprise-reporting.md) | [.NET 8 source](../engineering-labs/enterprise-reporting-dotnet/README.md) | CI build and synthetic JSON |
+
 The interactive website generates a deterministic local sample. The corresponding repository projects may use separate independently generated synthetic fixtures. **Numbers and outputs are not claimed to match across independent demos unless a specific reconciliation test has been run.**
 
 ## How to read a study

@@ -40,7 +40,7 @@ I turn complex data into clear, useful information. My work brings together **da
 <p>
   <a href="https://github.com/Dicureck/sql-performance-lab/tree/main/src/perf_lab"><img src="https://img.shields.io/badge/Python-142947?style=for-the-badge&logo=python&logoColor=53D6FF" alt="Python examples"/></a>
   <a href="https://github.com/Dicureck/challenge-amigo-secreto-esp_main/blob/main/app.js"><img src="https://img.shields.io/badge/JavaScript-142947?style=for-the-badge&logo=javascript&logoColor=53D6FF" alt="JavaScript examples"/></a>
-  <img src="https://img.shields.io/badge/C%23-142947?style=for-the-badge&logo=csharp&logoColor=9CCFFF" alt="C sharp familiarity"/>
+  <a href="./engineering-labs/enterprise-reporting-dotnet/README.md"><img src="https://img.shields.io/badge/C%23-142947?style=for-the-badge&logo=csharp&logoColor=9CCFFF" alt="Runnable C sharp source"/></a>
   <img src="https://img.shields.io/badge/Java-142947?style=for-the-badge&logo=openjdk&logoColor=9CCFFF" alt="Java familiarity"/>
 </p>
 
@@ -70,7 +70,7 @@ I turn complex data into clear, useful information. My work brings together **da
 
 [Tableau · Crystal Reports · Report Builder · C# · ChatGPT / Claude workflows · automated reporting](./knowledge-base/reporting-and-automation.md)
 
-<sub>C# and Java are part of my technical background; dedicated public examples are not available yet. The language statistics below reflect code in public repositories, not my overall experience.</sub>
+<sub>C# has an original .NET 8 public sample; Java is part of my background but does not yet have its own public lab. Language statistics reflect public repositories rather than total experience.</sub>
 
 ### `03 / FEATURED ENGINEERING LABS`
 
@@ -86,7 +86,7 @@ Independent, open-source demonstrations built with **synthetic data** and origin
 | **[Incident Intelligence](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales)** | SLA tracking, backlog analysis, and a dashboard built from synthetic incidents | [![Incident CI](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales/actions/workflows/ci.yml/badge.svg)](https://github.com/Dicureck/Dashboard-an-lisis-de-incidencias-operacionales/actions/workflows/ci.yml) |
 | **[Secret Friend](https://github.com/Dicureck/challenge-amigo-secreto-esp_main)** | Browser-based JavaScript with input validation and a random draw | [Source code](https://github.com/Dicureck/challenge-amigo-secreto-esp_main/blob/main/app.js) |
 
-**Coming next:** BI reporting with Tableau, Crystal Reports, and Report Builder; AI-assisted web development; and email and workflow automation. [See the project roadmap](./knowledge-base/portfolio-roadmap.md).
+**Additional runnable labs:** [AI & Business Automation](./engineering-labs/ai-business-automation/README.md) and [Enterprise Reporting / C#](./engineering-labs/enterprise-reporting-dotnet/README.md), with offline CI. Tableau, Crystal Reports and Report Builder native samples remain planned. [Roadmap](./knowledge-base/portfolio-roadmap.md).
 
 ### `04 / PROFESSIONAL FOCUS`
 
@@ -114,14 +114,14 @@ Practical engineering notes, checklists, and decisions—with links to working c
 <p align="center"><a href="./knowledge-base/README.md"><img src="https://img.shields.io/badge/OPEN-ENGINEERING_KNOWLEDGE_BASE-172447?style=for-the-badge&logo=readthedocs&logoColor=53D6FF" alt="Open engineering knowledge base"/></a></p>
 
 
-### \`05A / RUNNABLE WORKFLOWS & CASE STUDIES\`
+### `05A / RUNNABLE WORKFLOWS & CASE STUDIES`
 
 New independent sample applications and source-backed reporting explanations:
 
 | Engineering demonstration | Interactive showcase |
 |---|---|
-| [Python · AI & Business Automation](./engineering-labs/ai-business-automation/README.md) — synthetic JSON/HTML reports, unsent mail previews, approval-gated optional model API calls | [Security-aware workflow](./knowledge-base/ai-automation.md) |
-| [C# · .NET Enterprise Reporting](./engineering-labs/enterprise-reporting-dotnet/README.md) — typed CSV parser, decimal reporting, self-tests and CI | [Reporting architecture](./knowledge-base/reporting-platforms.md) |
+| [Python · AI & Business Automation](./engineering-labs/ai-business-automation/README.md) — synthetic JSON/HTML reports, unsent mail previews, approval-gated optional model API calls | [Technical case study](./case-studies/ai-automation.md) |
+| [C# · .NET Enterprise Reporting](./engineering-labs/enterprise-reporting-dotnet/README.md) — typed CSV parser, decimal reporting, self-tests and CI | [Technical case study](./case-studies/enterprise-reporting.md) |
 | [Logistics Case Study](./case-studies/logistics.md) | [Live dashboard](https://dicureck.github.io/?demo=logistics#lab) |
 | [Finance Case Study](./case-studies/finance.md) | [Live dashboard](https://dicureck.github.io/?demo=finance#lab) |
 | [Incidents Case Study](./case-studies/incidents.md) | [Live dashboard](https://dicureck.github.io/?demo=incidents#lab) |
