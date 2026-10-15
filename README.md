@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://dicureck.github.io/"><img alt="Interactive engineering portfolio website" src="https://img.shields.io/badge/PORTFOLIO-INTERACTIVE_WEB-163C48?style=for-the-badge&logo=googlechrome&logoColor=69EAF0&labelColor=141A32"/></a>
   <a href="https://github.com/Dicureck?tab=repositories"><img alt="Explore public code" src="https://img.shields.io/badge/EXPLORE-PUBLIC_CODE-0D2036?style=for-the-badge&logo=github&logoColor=55DDFF&labelColor=141A32"/></a>
   <a href="./knowledge-base/README.md"><img alt="Engineering knowledge base" src="https://img.shields.io/badge/ENGINEERING-KNOWLEDGE_BASE-211A3A?style=for-the-badge&logo=bookstack&logoColor=B39BFF&labelColor=141A32"/></a>
   <a href="./knowledge-base/portfolio-roadmap.md"><img alt="Portfolio roadmap" src="https://img.shields.io/badge/PORTFOLIO-ROADMAP-0F3040?style=for-the-badge&logo=githubprojects&logoColor=5DE3ED&labelColor=141A32"/></a>
@@ -147,6 +148,6 @@ DELIVER INSIGHTS & AUTOMATION
 
 I enjoy building data tools that solve practical problems—and making them clear enough for others to use and maintain.
 
-**Explore:** [Projects](https://github.com/Dicureck?tab=repositories) · [Engineering notes](./knowledge-base/README.md) · **Business inquiries:** [info@intebi.online](mailto:info@intebi.online)
+**Explore:** [Interactive portfolio](https://dicureck.github.io/) · [Projects](https://github.com/Dicureck?tab=repositories) · [Engineering notes](./knowledge-base/README.md) · **Business inquiries:** [info@intebi.online](mailto:info@intebi.online)
 
 <p align="center"><sub>Built with curiosity, care, and attention to detail. · Melissa Castro · Guatemala</sub></p>
