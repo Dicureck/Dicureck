@@ -1,6 +1,6 @@
 # Public GitHub Projects · Board Blueprint
 
-**Status: project configuration prepared, native GitHub Projects board not yet created.** This document is the source-controlled fallback until the owner opens GitHub's Projects interface and creates a project.
+**Status: native public GitHub Projects board created** at [Melissa Castro | Engineering Roadmap](https://github.com/users/Dicureck/projects/1); its `Engineering Board` view exists, but existing Issues and workflow columns are still being configured. This document records the correct next steps.
 
 ## Suggested GitHub Projects board
 
@@ -26,17 +26,25 @@ These items are already created in GitHub Issues. Do not duplicate them: add the
 
 ## Portfolio acceptance criteria
 
-- [ ] Board has a public link readable without account access.
+- [x] Public board URL exists: [Engineering Roadmap](https://github.com/users/Dicureck/projects/1) (public globe indicator visible in the GitHub interface).
 - [ ] Five existing Issues are imported by URL, not recreated.
 - [ ] Status fields accurately reflect shipped and unfinished work.
 - [ ] Optional columns show repository, area and priority.
 - [ ] Portfolio README and [public roadmap](https://dicureck.github.io/roadmap.html) link to the official board.
 - [ ] Major status changes include a comment or CI/release link as evidence.
 
-## How to create the board
+## Finish configuration of the existing board
 
-Open [your GitHub Projects overview](https://github.com/users/Dicureck/projects). Select **New project**, choose **Board**, give it the title above, and set visibility to **Public**. Use **Add item** to select existing `Dicureck/Dicureck` Issues #7–#11. Once the board exists, copy its official URL to update these documentation links.
+Do **not** create another project. Open the existing [Engineering Board view](https://github.com/users/Dicureck/projects/1/views/2).
 
-**Why not already created?** The currently connected GitHub integration offers repository/files/actions/issues, but not a native user-owned Projects v2 creation/edit action. A Markdown roadmap is not misrepresented as a GitHub Projects board.
+1. Clear the accidental `status:` filter with no value, then **Save** the view.
+2. Use **Add item** (or the board's + control) to search for the existing `Dicureck/Dicureck` Issues #7–#11. Do not create duplicate draft items.
+3. Group by Status and configure four status options if permitted: Backlog, In Progress, Verification, Published. If Github only offers Todo/In Progress/Done, preserve those until customized.
+4. Suggested initial states: #8 and #9 Backlog; #7 and #10 In Progress; closed #11 Published.
+5. Confirm that a signed-out visitor can view the public board and update any references to `/views/2` if the view URL changes.
+
+[Public project](https://github.com/users/Dicureck/projects/1) · [Board view](https://github.com/users/Dicureck/projects/1/views/2)
+
+**Integration boundary:** The board was created manually in GitHub by its owner; current connected actions cannot directly add/move native Projects v2 cards. The board itself is real; issue imports and statuses are not yet verified.
 
 [← Public roadmap](../ROADMAP.md) · [Official Releases](releases.md)
