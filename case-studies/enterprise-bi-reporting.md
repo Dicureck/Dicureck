@@ -81,7 +81,7 @@ These values were produced by the original offline code and dataset. **SU is not
 | Python / HTML | Implemented, automated and output artifact generated |
 | SQL Server | **Real SQL Server Developer CI passed:** original 72-row source equality and exact group/decimal parity in 3 date windows ([run](https://github.com/Dicureck/Dicureck/actions/runs/38917647482), [JSON evidence](../engineering-labs/enterprise-bi-reporting/evidence/sqlserver-ci-2026-10-16.json)) |
 | Report Builder / SSRS | Original .rdl XML with dataset/parameters, statically validated; **no native rendering or PDF/XLSX export proof** |
-| Power BI | Original DAX measures; **no native PBIX or DAX runtime result** |
+| Power BI | Eight original DAX measures, plus a [TMDL model source](../engineering-labs/enterprise-bi-reporting/powerbi/EnterpriseSales.SemanticModel/README.md) with a local synthetic CSV parameter. **No Desktop refresh, PBIX or native DAX execution yet** |
 | Tableau | Original calculated-field recipes; **no native TWB/TWBX runtime result** |
 | Crystal Reports | Engineering methodology only; **no proprietary or native template** |
 

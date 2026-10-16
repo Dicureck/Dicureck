@@ -164,6 +164,33 @@ class EnterpriseBITests(unittest.TestCase):
         self.assertNotIn("</script><script>alert(1)</script>", html)
         self.assertIn("\\u003c/script\\u003e", html)
 
+    def test_powerbi_tmdl_semantic_model_source_contract(self):
+        # Source-level checks only; they do not claim that Power BI Desktop ran.
+        model_root = ROOT / "powerbi" / "EnterpriseSales.SemanticModel"
+        manifest = json.loads((model_root / "definition.pbism").read_text(encoding="utf-8"))
+        self.assertGreaterEqual(float(manifest["version"]), 4.0)
+        definition = model_root / "definition"
+        database = (definition / "database.tmdl").read_text(encoding="utf-8")
+        model = (definition / "model.tmdl").read_text(encoding="utf-8")
+        table = (definition / "tables" / "FactSyntheticSales.tmdl").read_text(encoding="utf-8")
+        dax = (ROOT / "powerbi" / "measures.dax").read_text(encoding="utf-8")
+        self.assertTrue(database.startswith("database "))
+        self.assertIn("defaultPowerBIDataSourceVersion: powerBI_V3", model)
+        self.assertIn("ref table FactSyntheticSales", model)
+        self.assertIn('SalesCsvPath = "SET_LOCAL_PATH_TO_SYNTHETIC_SALES_CSV"', model)
+        self.assertIn("File.Contents(SalesCsvPath)", table)
+        self.assertNotIn("Web.Contents(", table)
+        self.assertIn("Table.RowCount(Typed) = 72", table)
+        self.assertIn("List.Distinct(VerifiedCount[order_id])", table)
+        columns = re.findall(r"^\\tcolumn ([a-z_]+)$", table, re.MULTILINE)
+        self.assertEqual(set(columns), set(lab.COLUMNS))
+        measures = re.findall(r"^\\tmeasure '([^']+)' = (.+)$", table, re.MULTILINE)
+        self.assertEqual(len(measures), 8)
+        for name, formula in measures:
+            self.assertIn(name + " = " + formula, dax)
+        self.assertEqual(table.count("formatString:"), 8)
+
+
 
 if __name__ == "__main__":
     unittest.main()

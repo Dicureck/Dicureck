@@ -40,6 +40,7 @@ Create a new, empty, disposable test database named EnterpriseBILab on **localho
 - [x] Execute original source rows and RDL SQL query in a disposable real SQL Server instance; compare results with Python Decimal aggregates.
 - [ ] Open the RDL in Report Builder or SSRS with an isolated local database. Verify parameter prompts and query execution.
 - [ ] Export RDL to PDF and Excel and compare all 12 Month×Region rows against report.json.
+- [x] Prepare [TMDL semantic model source](../powerbi/EnterpriseSales.SemanticModel/README.md) with seven fields, eight measures, local CSV parameter and offline structural checks.
 - [ ] Build and save an independent original Power BI PBIX using this exact fixture; validate DAX and slicer behavior.
 - [ ] Build and save an original Tableau workbook using this exact fixture; validate filter context, export and percentages.
 - [ ] Only package a Crystal Reports template after a licensed tool/runtime is available and tested.
