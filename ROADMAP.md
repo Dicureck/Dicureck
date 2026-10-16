@@ -8,6 +8,7 @@
 - [x] [.NET reporting lab](engineering-labs/enterprise-reporting-dotnet/README.md) with source, CSV input validation and CI
 - [x] [Reporting platform calculation notes](knowledge-base/bi-examples.md)
 - [x] [Unified Enterprise BI Reporting Lab](engineering-labs/enterprise-bi-reporting/README.md), with one 72-row source dataset, report JSON/HTML, SQL fixture, original RDL and DAX/Tableau calculation contracts
+- [x] [Execute the actual Enterprise BI RDL query against real SQL Server Developer](https://github.com/Dicureck/Dicureck/actions/runs/38917647482), verify all 72 source records and exact groups/decimals for three date windows
 
 ## Official v0.1.0 source releases
 

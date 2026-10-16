@@ -26,11 +26,19 @@ The dashboard is a static offline file, not a public live-API integration. No cr
 |---|---|---|
 | [sales.csv](fixtures/sales.csv) | 72 original fictional order-grain records, four months | Source data, strict Python validation and tests |
 | [Python reporting generator](src/report.py) | JSON, accessible local dashboard and region filters | CI unit/integration checks (when green) |
-| [SQL Server schema and fixture](sql/schema.sql), [seed](sql/seed.sql), [query](sql/report.sql) | Matching SQL Server dataset, safe empty-table guard, half-open date filtering | Source consistency checks; **live SQL Server test not yet performed for this RDL lab** |
+| [SQL Server schema and fixture](sql/schema.sql), [seed](sql/seed.sql), [query](sql/report.sql) | Matching SQL Server dataset, safe empty-table guard, half-open date filtering | **Real SQL Server 2022 Developer CI approved**: 72 exact source rows, 12 full-period groups, 6 subset groups and empty range; [raw evidence](evidence/sqlserver-ci-2026-10-16.json). SSRS rendering untested |
 | [Native RDL file](rdl/Enterprise-Sales-Summary.rdl) | Parameterized monthly × regional paginated table; integrated Windows auth to *localhost* | XML syntax and query/field consistency checks only; **SSRS/Report Builder rendering not yet performed** |
 | [Power BI DAX](powerbi/measures.dax) | Eight additive/rate measures defined on the same fixture | Formula/source review; no validated .pbix file |
 | [Tableau calculations](tableau/calculations.md) | Same KPIs and aggregate denominator rules | Original calculations; no validated .twb/.twbx |
 | [Data dictionary](docs/data-dictionary.md), [verification plan](docs/verification.md) | Grain, precision, filters, sources and acceptance | Human-readable contract and test design |
+
+## Verified SQL Server integration
+
+A disposable **SQL Server 2022 Developer** instance ran the committed schema, original 72-row synthetic INSERT and the **same parameterized SQL query embedded in the RDL**. The test confirmed full-row equality and exact decimal equivalence against the Python generator across three independent date windows. The ephemeral test database was removed afterward.
+
+[Successful CI run](https://github.com/Dicureck/Dicureck/actions/runs/38917647482) · [permanent SQL Server CI evidence](evidence/sqlserver-ci-2026-10-16.json) · [re-run workflow](https://github.com/Dicureck/Dicureck/actions/workflows/enterprise-bi-sqlserver.yml).
+
+**Boundary:** this is a real SQL Server query/data verification. It does not prove that SSRS Report Builder successfully renders, prints or exports the RDL.
 
 ## Architecture
 

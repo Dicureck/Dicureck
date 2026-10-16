@@ -14,7 +14,7 @@
 
 A public engineering example should include a data dictionary, exact KPI definitions, original fictional fixtures, reproducible formulas, and output reconciliation.
 
-**Current status:** original HTML dashboards, BI design guidance and C# reporting code exist. Native Tableau, Crystal Reports and Report Builder runtime examples still require separate licensed testing; documentation alone is not an executable report.
+**Current status:** the original [Enterprise BI reporting lab](https://github.com/Dicureck/Dicureck/tree/main/engineering-labs/enterprise-bi-reporting) now has an HTML dashboard and source-equivalent SQL Server, DAX, Tableau and RDL definitions. The SQL Server query ran successfully in [isolated real SQL Server CI](https://github.com/Dicureck/Dicureck/actions/runs/38917647482). **Native Report Builder rendering, Power BI/TWB execution and Crystal Reports remain separate unfinished checks.**
 
 [Reporting guide](https://github.com/Dicureck/Dicureck/blob/main/knowledge-base/reporting-platforms.md) · [BI calculation examples](https://github.com/Dicureck/Dicureck/blob/main/knowledge-base/bi-examples.md).
 

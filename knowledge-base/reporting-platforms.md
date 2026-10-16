@@ -1,6 +1,6 @@
 # Reporting Engineering | Power BI, Tableau, SSRS & Crystal Reports
 
-**Status:** original platform methodology and a new [Enterprise BI Lab](../engineering-labs/enterprise-bi-reporting/README.md) now include a real **RDL source file**, a shared synthetic fixture, DAX measures and Tableau calculations. The RDL is statically validated; no Report Builder/SSRS render, Tableau workbook or Power BI PBIX has been runtime-tested.
+**Status:** original platform methodology and a new [Enterprise BI Lab](../engineering-labs/enterprise-bi-reporting/README.md) now include a real **RDL source file**, a shared synthetic fixture, DAX measures and Tableau calculations. The underlying parameterized SQL has now been **executed and reconciled against real SQL Server Developer** ([CI evidence](https://github.com/Dicureck/Dicureck/actions/runs/38917647482)). The RDL XML is statically validated, but Report Builder/SSRS rendering, Tableau workbooks and Power BI PBIX remain unverified.
 
 ## 01 · Choose the delivery format
 

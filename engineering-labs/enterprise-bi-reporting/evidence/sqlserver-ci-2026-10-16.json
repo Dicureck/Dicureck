@@ -1,0 +1,36 @@
+{
+  "source": "original public synthetic 72-order fixture",
+  "engine": "Microsoft SQL Server 2022 (RTM-CU27-GDR) (KB5126934) - 16.0.4305.5 (X64) ",
+  "database": "new disposable loopback-only CI database",
+  "source_row_equality": true,
+  "source_rows": 72,
+  "query": "exact RDL-linked report.sql with bound date parameters",
+  "checks": [
+    {
+      "window": "full",
+      "start_inclusive": "2026-01-01",
+      "end_exclusive": "2026-05-01",
+      "month_region_rows": 12,
+      "orders": 72,
+      "equivalence": "exact decimal results and complete group keys"
+    },
+    {
+      "window": "feb_march",
+      "start_inclusive": "2026-02-01",
+      "end_exclusive": "2026-04-01",
+      "month_region_rows": 6,
+      "orders": 36,
+      "equivalence": "exact decimal results and complete group keys"
+    },
+    {
+      "window": "empty",
+      "start_inclusive": "2027-01-01",
+      "end_exclusive": "2027-02-01",
+      "month_region_rows": 0,
+      "orders": 0,
+      "equivalence": "exact decimal results and complete group keys"
+    }
+  ],
+  "tested_native_report_rendering": false,
+  "production_benchmark": false
+}

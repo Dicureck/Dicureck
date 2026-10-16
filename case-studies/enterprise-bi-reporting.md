@@ -52,6 +52,14 @@ It rejects duplicated order IDs, invalid dates/regions/channels, malformed monet
 
 A CI run generates both **report.json** and a **standalone browser dashboard.html** as a downloadable workflow artifact.
 
+## Real SQL Server evidence
+
+On October 16, 2026, GitHub Actions provisioned a loopback-only SQL Server 2022 Developer test container, created a new disposable database, ran the original T-SQL and compared the complete source and results to Python's Decimal calculations. Full January–April (72 orders / 12 groups), February–March (36 orders / 6 groups), and an empty future window (0 orders) all passed.
+
+[Verification run](https://github.com/Dicureck/Dicureck/actions/runs/38917647482) · [Machine-readable output](../engineering-labs/enterprise-bi-reporting/evidence/sqlserver-ci-2026-10-16.json).
+
+**This is not a test of SSRS rendering or a production benchmark.**
+
 ## 05 · Current sample results
 
 | Synthetic metric | Full fixture |
@@ -71,7 +79,7 @@ These values were produced by the original offline code and dataset. **SU is not
 | Platform | Current status |
 |---|---|
 | Python / HTML | Implemented, automated and output artifact generated |
-| SQL Server | Schema, exact fixture and parameterized query committed; **this lab's SQL has not yet been executed against a live SQL Server** |
+| SQL Server | **Real SQL Server Developer CI passed:** original 72-row source equality and exact group/decimal parity in 3 date windows ([run](https://github.com/Dicureck/Dicureck/actions/runs/38917647482), [JSON evidence](../engineering-labs/enterprise-bi-reporting/evidence/sqlserver-ci-2026-10-16.json)) |
 | Report Builder / SSRS | Original .rdl XML with dataset/parameters, statically validated; **no native rendering or PDF/XLSX export proof** |
 | Power BI | Original DAX measures; **no native PBIX or DAX runtime result** |
 | Tableau | Original calculated-field recipes; **no native TWB/TWBX runtime result** |
@@ -81,7 +89,7 @@ The independently tested SQL Performance Lab is not evidence that this new RDL r
 
 ## 07 · Next verification gate
 
-Run the schema, fixture and report on a disposable SQL Server instance; compare all twelve Month×Region rows with report.json. Then open the RDL in a licensed Report Builder environment, validate parameters and exports. Save native Power BI and Tableau files only after their calculations and filter behavior are tested.
+The SQL Server schema/fixture/query verification **is complete** with all 12 Month×Region groups and two additional windows. The next action is to open the RDL in a licensed Report Builder environment, validate its native parameter binding, rendering and PDF/XLSX exports. Save native Power BI and Tableau files only after their calculations and filter behavior are tested.
 
 [← All case studies](README.md) · [Data dictionary](../engineering-labs/enterprise-bi-reporting/docs/data-dictionary.md) · [Verification plan](../engineering-labs/enterprise-bi-reporting/docs/verification.md)
 
