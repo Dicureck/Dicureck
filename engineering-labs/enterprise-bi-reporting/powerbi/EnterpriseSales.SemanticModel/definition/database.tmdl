@@ -1,0 +1,4 @@
+database EnterpriseBISynthetic
+	compatibilityLevel: 1600
+	compatibilityMode: powerBI
+	language: 1033

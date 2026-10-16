@@ -1,0 +1,94 @@
+table FactSyntheticSales
+
+	/// Original fictional metric; calculated at the current report filter scope.
+	measure 'Orders' = COUNTROWS ( FactSyntheticSales )
+		formatString: #,##0
+
+	/// Original fictional metric; calculated at the current report filter scope.
+	measure 'Revenue SU' = SUM ( FactSyntheticSales[revenue_su] )
+		formatString: #,##0.00
+
+	/// Original fictional metric; calculated at the current report filter scope.
+	measure 'Cost SU' = SUM ( FactSyntheticSales[cost_su] )
+		formatString: #,##0.00
+
+	/// Original fictional metric; calculated at the current report filter scope.
+	measure 'Budget SU' = SUM ( FactSyntheticSales[budget_su] )
+		formatString: #,##0.00
+
+	/// Original fictional metric; calculated at the current report filter scope.
+	measure 'Margin SU' = [Revenue SU] - [Cost SU]
+		formatString: #,##0.00
+
+	/// Original fictional metric; calculated at the current report filter scope.
+	measure 'Margin %' = DIVIDE ( [Margin SU], [Revenue SU] )
+		formatString: 0.00%
+
+	/// Original fictional metric; calculated at the current report filter scope.
+	measure 'Budget Variance SU' = [Revenue SU] - [Budget SU]
+		formatString: #,##0.00
+
+	/// Original fictional metric; calculated at the current report filter scope.
+	measure 'Budget Variance %' = DIVIDE ( [Budget Variance SU], [Budget SU] )
+		formatString: 0.00%
+
+	column order_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: order_id
+
+	column sale_date
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: sale_date
+
+	column region
+		dataType: string
+		summarizeBy: none
+		sourceColumn: region
+
+	column channel
+		dataType: string
+		summarizeBy: none
+		sourceColumn: channel
+
+	column revenue_su
+		dataType: decimal
+		summarizeBy: none
+		sourceColumn: revenue_su
+
+	column cost_su
+		dataType: decimal
+		summarizeBy: none
+		sourceColumn: cost_su
+
+	column budget_su
+		dataType: decimal
+		summarizeBy: none
+		sourceColumn: budget_su
+
+	partition FactSyntheticSales = m
+		mode: import
+		source =
+			let
+				Source = Csv.Document(
+					File.Contents(SalesCsvPath),
+					[Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]
+				),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {
+						{"order_id", type text},
+						{"sale_date", type date},
+						{"region", type text},
+						{"channel", type text},
+						{"revenue_su", Currency.Type},
+						{"cost_su", Currency.Type},
+						{"budget_su", Currency.Type}
+					}, "en-US"),
+					VerifiedCount = if Table.RowCount(Typed) = 72 then Typed
+						else error "Expected precisely 72 original fictional sales rows",
+					UniqueIds = List.Count(List.Distinct(VerifiedCount[order_id])),
+					Validated = if UniqueIds = 72 then VerifiedCount
+						else error "Duplicate or missing fictional order IDs"
+			in
+				Validated
