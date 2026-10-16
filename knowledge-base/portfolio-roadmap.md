@@ -6,7 +6,7 @@ Public source code and synthetic tests demonstrate concrete techniques. They are
 
 | Project | Current public evidence | Still worth validating |
 |---|---|---|
-| [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab) | **SQL Server Developer container integration passed**, synthetic full-row equality checks and a [measured CI smoke benchmark](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md) | Actual execution plans/logical reads, more independent runs and production-like workloads |
+| [SQL Performance Lab](https://github.com/Dicureck/sql-performance-lab) | **SQL Server Developer CI validated:** full-row equivalence, [actual plans / CPU / logical reads](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-deep-profile-2026-10-16.md) across three selectivity runners, and [permanent raw evidence](https://github.com/Dicureck/sql-performance-lab/tree/main/evidence/deep-profiles/ci-38943948019) | More independent repeats of identical windows, higher cardinalities and production-like concurrency remain future research |
 | [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) | Offline toolkit CI plus [real Oracle Free 26ai syntax and query smoke](https://github.com/Dicureck/oracle-migration-toolkit/blob/main/evidence/oracle-free-runtime-2026-10-15.json) | **Oracle 12.1** compatibility and SQL Server ↔ Oracle functional parity |
 | [Logistics & Route Intelligence](https://github.com/Dicureck/logistics-route-intelligence) | Synthetic dataset generator, KPI dashboard, tests | Native BI artifact if added |
 | [Financial Intelligence Lab](https://github.com/Dicureck/financial-intelligence-lab) | Fictional ledger/reporting, checks, dashboard | Native BI report if added |
@@ -17,7 +17,7 @@ Public source code and synthetic tests demonstrate concrete techniques. They are
 
 ## Next priorities
 
-1. Extend the [first real SQL Server CI benchmark](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md) with actual plans/reads and independent repetitions.
+1. **Completed:** [deeper SQL Server benchmarking](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-deep-profile-2026-10-16.md) with server CPU, logical reads, 12 real plans, three independent runners with *different* date-window selectivities and seven within-run trials. Further identical-window cross-run sampling remains optional future research.
 2. Verify the offline Oracle toolkit against controlled Oracle and SQL Server engines.
 3. Expand the [new Enterprise BI Lab](../engineering-labs/enterprise-bi-reporting/README.md): original parameterized RDL and identical fictional Python/SQL/DAX/Tableau data contracts exist; the [TMDL semantic model source](../engineering-labs/enterprise-bi-reporting/powerbi/EnterpriseSales.SemanticModel/README.md) and static checks are prepared; validate native Report Builder, Power BI Desktop and Tableau runtimes with reconciled exports.
 4. Extend the existing runnable [Python automation](../engineering-labs/ai-business-automation/README.md) and [.NET 8 reporting](../engineering-labs/enterprise-reporting-dotnet/README.md) laboratories with more fixtures and presentation assets.

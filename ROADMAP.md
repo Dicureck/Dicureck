@@ -17,7 +17,7 @@ Six independent repositories now have [official tagged releases](knowledge-base/
 ## Next verification gates
 - [ ] Test optional OpenAI / Anthropic APIs in a controlled non-production account; never store provider keys or live responses in the public repo
 - [x] Run initial real SQL Server Developer CI benchmark with synthetic fixtures and [publish bounded measurements](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md)
-- [ ] Expand SQL Server benchmarks with actual plans, logical reads and repeated independent trials
+- [x] Expand SQL Server benchmarks with [actual plans, server CPU, logical reads, three selectivity runners and seven trials per variant](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-deep-profile-2026-10-16.md), with [permanent raw evidence](https://github.com/Dicureck/sql-performance-lab/tree/main/evidence/deep-profiles/ci-38943948019) and explicit statistical limits
 - [ ] Run SQL Server → Oracle comparison in authorized isolated instances and validate result multiset equivalence
 - [ ] Publish actual Power BI / Tableau / RDL demonstrations after runtime validation and licensing checks
 - [x] Synchronize [eight native GitHub Wiki tutorials](https://github.com/Dicureck/Dicureck/wiki) with [protected GitHub Actions](https://github.com/Dicureck/Dicureck/actions/runs/38824211359), preserving the original Home and SQL Performance pages
