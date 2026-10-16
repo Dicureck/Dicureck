@@ -1,0 +1,60 @@
+name: Enterprise BI — Real SQL Server Integration
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'engineering-labs/enterprise-bi-reporting/**'
+      - '.github/workflows/enterprise-bi-sqlserver.yml'
+  pull_request:
+    paths:
+      - 'engineering-labs/enterprise-bi-reporting/**'
+      - '.github/workflows/enterprise-bi-sqlserver.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sqlserver-reconciliation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 24
+    env:
+      ENTERPRISE_BI_CI_ISOLATED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install SQL Server Python client (CI only)
+        run: python -m pip install 'pymssql>=2.3.2,<3.0'
+      - name: Generate ephemeral CI-only administrator password
+        shell: bash
+        run: |
+          set -euo pipefail
+          password="$(python -c 'import secrets; print("Safe_CI_Only_2026!"+secrets.token_hex(16))')"
+          echo "::add-mask::$password"
+          printf 'SQLLAB_PASSWORD=%s\n' "$password" >> "$GITHUB_ENV"
+      - name: Start isolated localhost SQL Server Developer container
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --detach --name enterprise-bi-ci-sql --restart no \
+            --publish 127.0.0.1:14333:1433 \
+            --env ACCEPT_EULA=Y \
+            --env MSSQL_PID=Developer \
+            --env MSSQL_SA_PASSWORD="$SQLLAB_PASSWORD" \
+            mcr.microsoft.com/mssql/server:2022-latest
+      - name: Reconcile real SQL Server results to original Python Decimal report
+        run: python engineering-labs/enterprise-bi-reporting/tests/sqlserver_integration.py
+      - name: Preserve exact test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: enterprise-bi-real-sqlserver-evidence
+          path: output/enterprise-bi/sqlserver-ci-evidence.json
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Remove disposable test container
+        if: always()
+        run: docker rm -f enterprise-bi-ci-sql 2>/dev/null || true
