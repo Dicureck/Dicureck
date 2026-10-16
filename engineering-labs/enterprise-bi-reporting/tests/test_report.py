@@ -182,9 +182,17 @@ class EnterpriseBITests(unittest.TestCase):
         self.assertNotIn("Web.Contents(", table)
         self.assertIn("Table.RowCount(Typed) = 72", table)
         self.assertIn("List.Distinct(VerifiedCount[order_id])", table)
-        columns = re.findall(r"^\\tcolumn ([a-z_]+)$", table, re.MULTILINE)
+        columns = [
+            line.strip().removeprefix("column ")
+            for line in table.splitlines()
+            if line.strip().startswith("column ")
+        ]
         self.assertEqual(set(columns), set(lab.COLUMNS))
-        measures = re.findall(r"^\\tmeasure '([^']+)' = (.+)$", table, re.MULTILINE)
+        measures = [
+            re.match(r"measure '([^']+)' = (.+)$", line.strip()).groups()
+            for line in table.splitlines()
+            if line.strip().startswith("measure ")
+        ]
         self.assertEqual(len(measures), 8)
         for name, formula in measures:
             self.assertIn(name + " = " + formula, dax)
