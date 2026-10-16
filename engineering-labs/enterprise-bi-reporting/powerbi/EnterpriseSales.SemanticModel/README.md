@@ -2,7 +2,7 @@
 
 This directory supplies **original source-controlled semantic model definitions**, in the official Power BI TMDL folder style: [Microsoft guidance](https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-dataset).
 
-**Current verification:** source and static contract tests only. It has **not yet been opened, imported, refreshed or executed inside Power BI Desktop**. There is no published PBIX or packaged, validated PBIP report. Do not claim otherwise.
+**Current verification:** the TMDL model was successfully deserialized by Microsoft's official Analysis Services Tabular serializer in [GitHub Actions](https://github.com/Dicureck/Dicureck/actions/runs/38919301738); this confirms parseable model metadata and counts of seven fields, eight measures and one partition. The CSV import and DAX formulas have **not** been executed or refreshed inside Power BI Desktop. There is no published PBIX or packaged, validated PBIP report. Do not claim otherwise.
 
 ## Inputs and semantics
 
@@ -14,6 +14,12 @@ The model defines:
 - M import of a **local CSV file only**, not an external API.
 - Automatic rejection of a fixture with an unexpected row count or duplicate order IDs.
 - Correct aggregate margin ratio and null/blank behavior for zero denominators.
+
+## Verified parser test
+
+[Source for the .NET parser](../tmdl-validation/Program.cs) · [Successful CI](https://github.com/Dicureck/Dicureck/actions/runs/38919301738). The official Microsoft Analysis Services SDK reads this exact TMDL folder into a Tabular database object and checks the expected columns, measures and local import partition without contacting any production system.
+
+**Boundary:** successful TMDL deserialization is not a Power BI Desktop refresh, a verified DAX calculation or a native report screenshot.
 
 ## How to use in Power BI Desktop
 
