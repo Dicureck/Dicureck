@@ -19,7 +19,7 @@ Public source code and synthetic tests demonstrate concrete techniques. They are
 
 1. Extend the [first real SQL Server CI benchmark](https://github.com/Dicureck/sql-performance-lab/blob/main/docs/verified-ci-benchmark-2026-10-15.md) with actual plans/reads and independent repetitions.
 2. Verify the offline Oracle toolkit against controlled Oracle and SQL Server engines.
-3. Expand the [new Enterprise BI Lab](../engineering-labs/enterprise-bi-reporting/README.md): original parameterized RDL and identical fictional Python/SQL/DAX/Tableau data contracts exist; validate native Report Builder, Power BI and Tableau runtimes with reconciled exports.
+3. Expand the [new Enterprise BI Lab](../engineering-labs/enterprise-bi-reporting/README.md): original parameterized RDL and identical fictional Python/SQL/DAX/Tableau data contracts exist; the [TMDL semantic model source](../engineering-labs/enterprise-bi-reporting/powerbi/EnterpriseSales.SemanticModel/README.md) and static checks are prepared; validate native Report Builder, Power BI Desktop and Tableau runtimes with reconciled exports.
 4. Extend the existing runnable [Python automation](../engineering-labs/ai-business-automation/README.md) and [.NET 8 reporting](../engineering-labs/enterprise-reporting-dotnet/README.md) laboratories with more fixtures and presentation assets.
 5. Prepare official GitHub Releases from evidence-backed draft notes (a draft is **not** a native release).
 6. Maintain the [synchronized native Wiki](https://github.com/Dicureck/Dicureck/wiki) and [public Engineering Board](https://github.com/users/Dicureck/projects/1/views/2).

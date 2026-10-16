@@ -46,3 +46,8 @@ Important: Tableau's order of operations, FIXED LOD calculations and context fil
 4. Publish native visual assets and runtime results before claiming a tool-specific implementation.
 
 [Reporting platforms](reporting-platforms.md) · [Analytics engineering](analytics-engineering.md) · [Portfolio](https://dicureck.github.io/)
+
+
+## Cohesive Enterprise BI example
+
+The separate [Enterprise BI Lab](../engineering-labs/enterprise-bi-reporting/README.md) uses one identical 72-order fictional fixture for Python reporting, verified SQL Server totals, and matching Power BI/Tableau contracts. Its [Power BI TMDL semantic model source](../engineering-labs/enterprise-bi-reporting/powerbi/EnterpriseSales.SemanticModel/README.md) contains seven fields, eight DAX measures and a configurable local file parameter. It passes static checks, but it has not been refreshed in Power BI Desktop. A native validated Power BI project remains pending.
