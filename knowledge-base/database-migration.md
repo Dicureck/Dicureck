@@ -106,7 +106,7 @@ There is no single universal object order; the graph determines the sequence.
 | Performance checks | Repeated measurements on each engine | Universal speedup |
 | Release approval | Sign-off, recovery rehearsal | No future defects |
 
-The public [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) demonstrates conservative *offline* checks, dependency planning and synthetic reconciliation. It does not claim live SQL Server-to-Oracle equivalence.
+The public [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) combines offline risk assessment and dependency planning with a **[bounded, real two-engine SQL Server ↔ Oracle Free parity test](https://github.com/Dicureck/oracle-migration-toolkit/blob/main/docs/verified-cross-engine-parity-2026-10-16.md)**. Both engines processed the same 26 invented customers and 260 orders, confirmed original February revenue, Top 10, month/customer groups and five date windows, and verified transaction rollback. The [raw engine outputs](https://github.com/Dicureck/oracle-migration-toolkit/tree/main/evidence/cross-engine/ci-38946759282) are permanently archived. **This does not establish Oracle 12.1.0.2 compatibility or a general production migration guarantee.**
 
 ## 07 · Engineering review checklist
 
@@ -128,3 +128,12 @@ The public [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migrati
 ## Verified Oracle target-only smoke · 2026-10-15
 
 The [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) now has an [actual Oracle Free 26ai runtime test](https://github.com/Dicureck/oracle-migration-toolkit/actions/runs/38815481933) using fictional tables, queries and an INSERT/ROLLBACK example. [Original runtime output](https://github.com/Dicureck/oracle-migration-toolkit/blob/main/evidence/oracle-free-runtime-2026-10-15.json) is retained in source control. **This does not establish Oracle 12.1.0.2 compatibility or SQL Server-to-Oracle equivalence.**
+
+
+## Verified live source-to-target parity · 2026-10-16
+
+A [three-stage GitHub Actions run](https://github.com/Dicureck/oracle-migration-toolkit/actions/runs/38946759282) separately executed original T-SQL in **SQL Server 2022 Developer 16.0.4305.5** and paired Oracle SQL in **Oracle Free 26ai 23.26.3.0.0** on the exact same source rows. Both engines matched independent Decimal reference values for 14 original February result rows, 10 Top customers, 160 month/client groups and five date windows (including leap day and an empty future period). Rollbacks preserved original rows.
+
+The live tests also confirmed a **real non-equivalence**: Oracle evaluates the empty string as NULL, while SQL Server does not. This is a required migration decision, not a discrepancy hidden by normalization.
+
+[Complete live case study](https://github.com/Dicureck/oracle-migration-toolkit/blob/main/docs/verified-cross-engine-parity-2026-10-16.md) · [Versioned raw results](https://github.com/Dicureck/oracle-migration-toolkit/tree/main/evidence/cross-engine/ci-38946759282). Oracle 12.1 target compilation/execution, time zone/NLS coverage, generated-key cases and plan comparison remain separate gates.

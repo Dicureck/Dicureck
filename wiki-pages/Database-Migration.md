@@ -28,7 +28,7 @@ flowchart TD
 | Identity and sequences | Concurrency and key-generation policy |
 | Procedures and functions | Parameters, exceptions and transaction boundaries |
 
-The [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) has offline checks and original SQL executed in Oracle AI Database Free 26ai. This **does not** certify Oracle 12.1 or complete cross-engine parity.
+The [Oracle Migration Toolkit](https://github.com/Dicureck/oracle-migration-toolkit) now has **[verified real SQL Server 2022 ↔ Oracle Free 26ai functional parity](https://github.com/Dicureck/oracle-migration-toolkit/blob/main/docs/verified-cross-engine-parity-2026-10-16.md)** for **260 original fictional orders**, February summaries, Top 10, 160 month/customer groups, five date windows and rollback. It also recorded the real empty-string/NULL incompatibility. [Inspect the raw engine outputs](https://github.com/Dicureck/oracle-migration-toolkit/tree/main/evidence/cross-engine/ci-38946759282). **Oracle 12.1.0.2 and general migration compatibility are not verified.**
 
 [Official v0.1.0 release](https://github.com/Dicureck/oracle-migration-toolkit/releases/tag/v0.1.0) · [Detailed guide](https://github.com/Dicureck/Dicureck/blob/main/knowledge-base/database-migration.md).
 
