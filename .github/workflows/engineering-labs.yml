@@ -79,3 +79,18 @@ jobs:
           name: synthetic-enterprise-bi-dashboard
           path: output/enterprise-bi/
           retention-days: 14
+  powerbi_tmdl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Restore official Analysis Services TOM parser
+        run: dotnet restore engineering-labs/enterprise-bi-reporting/powerbi/tmdl-validation/TmdlValidation.csproj
+      - name: Parse and validate TMDL with Microsoft serializer
+        run: >-
+          dotnet run --no-restore
+          --project engineering-labs/enterprise-bi-reporting/powerbi/tmdl-validation/TmdlValidation.csproj
+          -- engineering-labs/enterprise-bi-reporting/powerbi/EnterpriseSales.SemanticModel/definition
